@@ -1,0 +1,8 @@
+extend default
+
+block title
+	title!= locals.site + ' &middot; ' + locals.desc
+
+block content
+	div(class="page")
+		!= page.html

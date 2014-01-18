@@ -1,0 +1,19 @@
+doctype html
+html(lang="en-ca")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1")
+		meta(description=locals.desc)
+		block title
+		link(rel="stylesheet" href="/css/poole.css")
+		link(rel="stylesheet" href="/css/lanyon.css")
+		link(rel="stylesheet" href="/css/shame.css")
+		link(rel="icon" type="image/png" href="/imgs/animal-monkey-sulky.png")
+	body
+		header(class="masthead")
+			div(class="container")
+				h3(class="masthead-title")
+					a(href="/")!= locals.site
+					small!= ' &middot; ' + locals.desc
+		div(class="content container")
+			block content

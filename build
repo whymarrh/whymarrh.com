@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -e
 
@@ -21,4 +21,6 @@ cd .. # Done
 
 tree $build_dir
 
-test -x ./$upload && ./$upload
+read -e -p "Upload: " -i y choice
+shopt -s nocasematch
+[[ $choice == "Y" ]] && test -x ./$upload && ./$upload

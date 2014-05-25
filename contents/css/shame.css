@@ -36,7 +36,8 @@ ul {
 }
 
 .masthead {
-  margin-bottom: 3rem;
+	margin: 3rem 0;
+	border: none;
 }
 
 .masthead-title small {

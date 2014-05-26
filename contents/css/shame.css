@@ -21,14 +21,19 @@ html {
 	        hyphens: auto;
 }
 
+body {
+	color: #515151;
+}
+
 h1, h2, h3, h4, h5, h6 {
-	font-family: Helvetica, "Helvetica Neue", "PT Sans", Arial, sans-serif;
+	color: inherit;
+	font-family: "Helvetica Neue", Helvetica, "PT Sans", Arial, sans-serif;
 	text-align: left;
 }
 
 h1 {
-	margin: 1.5rem 0;
 	font-size: 1.25rem;
+	margin: 1.5rem 0;
 }
 
 ul {
@@ -40,8 +45,16 @@ ul {
 	border: none;
 }
 
+.masthead-title {
+	color: inherit;
+}
+
 .masthead-title small {
 	font-size: 100%;
+}
+
+.masthead-title a {
+	color: inherit;
 }
 
 .page,

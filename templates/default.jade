@@ -11,7 +11,6 @@ html(lang="en-ca")
 	body
 		header(class="masthead")
 			div(class="container")
-				h1(class="masthead-title")
-					a(href="/")!= locals.site
+				h1(class="masthead-title")!= locals.site
 		div(class="content container")
 			block content

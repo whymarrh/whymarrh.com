@@ -1,5 +1,5 @@
 {
 	"private": true,
-	"dependencies": {"moment": "*"},
-	"scripts": {"build": "./build"}
+	"dependencies": { "moment": "*" },
+	"scripts": { "build": "./build" }
 }

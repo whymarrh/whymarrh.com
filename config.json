@@ -7,7 +7,7 @@
 	"output": "./www",
 	"plugins": [],
 	"port": 8000,
-	"require": {"moment": "moment"},
+	"require": { "moment": "moment" },
 	"templates": "./templates",
 	"views": null
 }

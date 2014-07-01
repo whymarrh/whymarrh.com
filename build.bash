@@ -10,7 +10,7 @@ test -d $build_dir && rm -r $build_dir
 echo "Generating static files from sources"
 wintersmith build
 cd $build_dir
-for f in css/*.css
+for f in c/*.css
 do
 	echo "Minifying $f"
 	java -jar `which closure-stylesheets.jar` --allow-unrecognized-properties $f > $f.tmp

@@ -1,0 +1,7 @@
+{ "private": true,
+  "dependencies": {
+	"handlebars": "*",
+	"metalsmith": "*",
+	"metalsmith-markdown": "*",
+	"metalsmith-templates": "*"
+	}}

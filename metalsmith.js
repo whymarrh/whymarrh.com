@@ -1,17 +1,14 @@
-Metalsmith = require('metalsmith')
   markdown = require('metalsmith-markdown')
- templates = require('metalsmith-templates')
+Metalsmith = require('metalsmith')
 
-// 1. Set the source directory to be src/
-// 2. Render any mardown files to HTML
-// 3. Render files into a template file
-// 4. Output files to the build/ directory
-// 5. Log any and all errors
+     title = require('./lib/title')
+  template = require('./lib/template')
 
 Metalsmith(__dirname)
 	.source('./src')
+	.use(title)
 	.use(markdown())
-	.use(templates('handlebars'))
+	.use(template)
 	.destination('./build')
 	.build(function (err) {
 		err && console.log(err)

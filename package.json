@@ -1,7 +1,9 @@
 { "private": true,
   "dependencies": {
+	"async": "*",
+	"consolidate": "*",
 	"handlebars": "*",
+	"lodash": "*",
 	"metalsmith": "*",
-	"metalsmith-markdown": "*",
-	"metalsmith-templates": "*"
+	"metalsmith-markdown": "*"
 	}}

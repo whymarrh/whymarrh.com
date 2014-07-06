@@ -40,7 +40,7 @@ Whitespace
 1. Place 1 space between function arguments
 1. Set off operators with spaces (unless you&rsquo;re an animal)
 1. Add a trailing newline to the end of each file
-1. Don&rsquo; have more than one empty line in succession
+1. Don&rsquo;t have more than one empty line in succession
 
 One of the better examples I can think of regarding tabs and spaces:
 
@@ -87,7 +87,7 @@ Blocks
 
 1. Always. Use. Braces.
 
-Example:
+Examples:
 
 ```js
 // Bad
@@ -113,7 +113,7 @@ Comments
 1. Use `//` for single line comments
 1. Place single space between the forward slashes and the following text
 
-Example:
+Examples:
 
 ```js
 //Bad
@@ -127,9 +127,9 @@ Conditionals
 
 1. Don&rsquo;t use `===` just for the sake of it
 1. Use shortcuts liberally (e.g. `if (x)` instead of `if (x != '')`)
-1. `if` is not a function call, put space between the `if` keyword and parentheses
+1. Place 1 space between the `if` keyword and parentheses
 
-Example:
+Examples:
 
 ```js
 // Bad
@@ -145,7 +145,7 @@ if (foo) {
 
 1. Break complex condition across multiple lines
 
-Example:
+Examples:
 
 ```js
 if (
@@ -165,7 +165,7 @@ Functions
 1. Prefer function expressions to function declarations
 1. Prefer named functions expressions to anonymous function expressions
 
-Example:
+Examples:
 
 ```js
 // Good
@@ -217,7 +217,7 @@ Objects
 1. Use the literal syntax for object declaration
 1. Quote keys
 
-Example:
+Examples:
 
 ```js
 // Bad
@@ -237,7 +237,7 @@ Properties
 1. Prefer dot notation when accessing properties
 1. Use subscript notation `[]` when accessing properties with a variable
 
-Example:
+Examples:
 
 ```js
 // Bad
@@ -252,7 +252,7 @@ Strings
 
 1. Use double quotes
 
-Example:
+Examples:
 
 ```js
 // Bad
@@ -267,11 +267,11 @@ Variable declarations
 
 1. Declare one variable per line, using the `var` keyword each time.
 
-Example:
+Examples:
 
 ```js
-var foo = '3';
-var bar = 'a';
+var foo = "3";
+var bar = "a";
 var baz = {
 	"qux": [2, 1, 1]
 };

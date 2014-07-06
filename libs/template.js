@@ -1,6 +1,6 @@
-         _ = require('lodash')
      async = require('async')
 handlebars = require('consolidate').handlebars
+         _ = require('lodash')
 
 isHtml = RegExp.prototype.test.bind(/\.html$/)
 

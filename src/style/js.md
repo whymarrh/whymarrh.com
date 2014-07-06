@@ -200,8 +200,8 @@ See also: [whitespace](#whitespace) and [functions](#functions).
 Objects
 -------
 
-1. Use the literal syntax for object declaration,
-1. Quote keys as string.
+1. Use the literal syntax for object declaration
+1. Quote keys
 
 Example:
 

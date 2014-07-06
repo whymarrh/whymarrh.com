@@ -15,9 +15,7 @@ $ node metalsmith.js
 
 ### Aside
 
-The style of JavaScript used in this repository is not indicative of my views on how JavaScript is *properly* written. This is me playing around with the limits of the language, its [ASI][3], and global variables everywhere (all of which are just awful).
-
-See my personal [Style Guide][4] for how I try to write JavaScript.
+The style of JavaScript used in this repository is not indicative of my views on how JavaScript is *properly* written. This is me playing around with the limits of the language, its [ASI][3], and global variables everywhere (all of which are just awful). My personal [style guide][4] outlines how I try to write JavaScript.
 
   [1]:https://whymarrh.com
   [2]:http://metalsmith.io

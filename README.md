@@ -19,5 +19,5 @@ The style of JavaScript used in this repository is not indicative of my views on
 
   [1]:https://whymarrh.com
   [2]:http://metalsmith.io
-  [3]:http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
+  [3]:http://www.ecma-international.org/ecma-262/5.1/#sec-7.9
   [4]:src/style/js.md

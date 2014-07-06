@@ -143,6 +143,20 @@ if (foo) {
 }
 ```
 
+1. Break complex condition across multiple lines
+
+Example:
+
+```js
+if (
+	   foo
+	&& bar
+	&& (!baz || qux)
+) {
+	go();
+}
+```
+
 See also: [whitespace](#whitespace).
 
 Functions

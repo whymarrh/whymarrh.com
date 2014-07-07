@@ -13,7 +13,7 @@ a:hover {
 }
 
 html {
-	font-family: Charter, Georgia, "Times New Roman", "PT Serif", serif;
+	font-family: Georgia, Charter, "Times New Roman", serif;
 	text-align: justify;
 	    -ms-hyphens: auto;
 	   -moz-hyphens: auto;
@@ -27,7 +27,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	color: inherit;
-	font-family: Roboto, "Helvetica Neue", Helvetica, "PT Sans", Arial, sans-serif;
+	font-family: Arial, Roboto, "Helvetica Neue", Helvetica, sans-serif;
 	text-align: left;
 }
 
@@ -73,5 +73,5 @@ ul {
 }
 
 pre, code {
-	font-family: CamingoCode, Consolas, monospace;
+	font-family: Consolas, monospace;
 }

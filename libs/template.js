@@ -16,7 +16,7 @@ module.exports = function (files, metalsmith, done) {
 			) {
 				return complete()
 			}
-			template = metalsmith.join('templates', data.template)
+			template = metalsmith.join('templ', data.template)
 			options = _.assign({}, metalsmith.metadata(), data)
 			handlebars(
 				template,

@@ -8,8 +8,7 @@ Metalsmith = require('metalsmith')
   template = require('./libs/template')
 
 Metalsmith(__dirname)
-	.source('./src')
-	.destination('./build')
+	.source('./source')
 	.use(ignore([
 		'drafts/**',
 		'vendor/**'

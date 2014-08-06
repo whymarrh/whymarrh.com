@@ -5,6 +5,8 @@
 	"handlebars": "*",
 	"lodash": "*",
 	"metalsmith": "*",
+	"metalsmith-ignore": "*",
 	"metalsmith-markdown": "*",
+	"metalsmith-watch": "*",
 	"minimatch": "*"
 	}}

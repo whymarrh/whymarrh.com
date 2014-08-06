@@ -1,7 +1,7 @@
 whymarrh.com
 ============
 
-The source files for my personal site, [whymarrh.com][1]. The site is simply static content, plain old HTML & CSS, compiled with [Metalsmith][2] (which is really nifty if I may say so).
+The source files for my personal site, [whymarrh.com][1]. The site is simply static content, plain old HTML & CSS, compiled with [Metalsmith][2] (which is really nifty if I may say so myself).
 
   [1]:https://whymarrh.com
   [2]:http://metalsmith.io

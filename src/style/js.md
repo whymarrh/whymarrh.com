@@ -85,7 +85,7 @@ Arrays
 Blocks
 ------
 
-1. Always. Use. Braces.
+1. Always. Use. Braces. *Please and thank you.*
 
 Examples:
 
@@ -111,7 +111,7 @@ Comments
 --------
 
 1. Use `//` for single line comments
-1. Place single space between the forward slashes and the following text
+1. **Place single space between the forward slashes and the following text**
 
 Examples:
 
@@ -245,6 +245,10 @@ var bar = foo["bar"];
 
 // Good
 var bar = foo.bar;
+
+// Good
+var s = "bar";
+var bar = foo[s];
 ```
 
 Strings

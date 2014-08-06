@@ -30,7 +30,7 @@ Other stuff:
 1. [Objects](#objects)
 1. [Properties](#properties)
 1. [Strings](#strings)
-1. [Variables](#variables)
+1. [Variables](#variable-declarations)
 
 Whitespace
 ----------

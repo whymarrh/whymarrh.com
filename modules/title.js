@@ -19,7 +19,7 @@ module.exports = function (files, metalsmith, done) {
 			//
 			// Only matches the first occurence of either.
 			/(?:(?:^|\n)\s*\#\s*([^\n]+?)\s*\#?\s*(?:\n+|$))|(?:(?:^|\n)([^\n]+?)\n[=]{3,}(?:\n+|$))/,
-			function (match, a, b, offset, str) {
+			function (match, a, b) {
 				// 1st or 2nd group
 				data.title = a || b
 				return '\n'

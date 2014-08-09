@@ -3,12 +3,11 @@
 Metalsmith = require('metalsmith')
      watch = require('metalsmith-watch')
 
-    sigint = require('./libs/sigint')(process)
-     title = require('./libs/title')
-  template = require('./libs/template')
+    sigint = require('./modules/sigint')(process)
+     title = require('./modules/title')
+  template = require('./modules/template')
 
 Metalsmith(__dirname)
-	.source('./source')
 	.use(ignore([
 		'drafts/**',
 		'vendor/**'

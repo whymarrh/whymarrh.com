@@ -12,9 +12,9 @@ Metalsmith(__dirname)
 		'drafts/**',
 		'vendor/**'
 	]))
-	.use(title)
+	.use(title())
 	.use(markdown())
-	.use(template)
+	.use(template())
 	.use(watch())
 	.build(function (err) {
 		err && console.log(err)

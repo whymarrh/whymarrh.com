@@ -215,7 +215,7 @@ Objects
 -------
 
 1. Use the literal syntax for object declaration
-1. Quote keys
+1. Quote keys (optionally but consistently throughout a project)
 
 Examples:
 

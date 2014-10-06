@@ -20,7 +20,7 @@ module.exports = function template(opts) {
 				options = _.assign({}, metalsmith.metadata(), data)
 				handlebars(
 					// Template name
-					metalsmith.join('templ', data.template),
+					metalsmith.path('templ', data.template),
 					// Options
 					options,
 					// Callback fn

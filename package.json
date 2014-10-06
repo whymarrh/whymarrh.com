@@ -14,6 +14,7 @@
 		"minimatch": "*"
 	},
 	"scripts": {
-		"compress": "find build -type f | grep -v '.gz$' | xargs zopfli -i1000"
+		"compress": "find build -type f | grep -v '.gz$' | xargs zopfli -i1000",
+		"upload": "script/upload"
 	}
 }

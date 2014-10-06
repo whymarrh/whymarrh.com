@@ -13,7 +13,7 @@ Install dependencies by running the usual `npm install`.
 To compile:
 
 ```bash
-$ node metalsmith.js
+$ node metalsmith.js --build
 ```
 
 ### Aside

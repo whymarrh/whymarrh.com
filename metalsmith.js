@@ -4,10 +4,15 @@ htmlMinifier = require('metalsmith-html-minifier')
     markdown = require('metalsmith-markdown')
   Metalsmith = require('metalsmith')
        watch = require('metalsmith-watch')
+        nopt = require('nopt')
 
     sigint = require('./modules/sigint')(process)
      title = require('./modules/title')
   template = require('./modules/template')
+
+options = nopt({
+	'build': Boolean
+})
 
 Metalsmith(__dirname)
 	.use(ignore([
@@ -19,7 +24,7 @@ Metalsmith(__dirname)
 	.use(template())
 	.use(cleanCSS())
 	.use(htmlMinifier())
-	.use(watch())
+	.use(!options.build && watch())
 	.build(function (err) {
 		err && console.log(err)
 	})

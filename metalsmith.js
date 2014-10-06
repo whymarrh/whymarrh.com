@@ -6,15 +6,16 @@ htmlMinifier = require('metalsmith-html-minifier')
        watch = require('metalsmith-watch')
         nopt = require('nopt')
 
-    sigint = require('./modules/sigint')(process)
-     title = require('./modules/title')
-  template = require('./modules/template')
+    sigint = require('./plugins/sigint')(process)
+     title = require('./plugins/title')
+  template = require('./plugins/template')
 
 options = nopt({
 	'build': Boolean
 })
 
 Metalsmith(__dirname)
+	.source('source')
 	.use(ignore([
 		'drafts/**',
 		'vendor/**'

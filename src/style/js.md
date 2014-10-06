@@ -163,7 +163,9 @@ Functions
 ---------
 
 1. Prefer function expressions to function declarations
-1. Prefer named functions expressions to anonymous function expressions
+1. Prefer [named functions expressions] to anonymous function expressions
+
+  [named function expressions]:https://kangax.github.io/nfe/
 
 Examples:
 

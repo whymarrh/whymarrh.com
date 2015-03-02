@@ -11,7 +11,7 @@ htmlMinifier = require('metalsmith-html-minifier')
   template = require('./plugins/template')
 
 options = nopt({
-	'build': Boolean
+	'watch': Boolean
 })
 
 Metalsmith(__dirname)
@@ -25,7 +25,7 @@ Metalsmith(__dirname)
 	.use(template())
 	.use(cleanCSS())
 	.use(htmlMinifier())
-	.use(!options.build && watch())
+	.use(options.watch && watch())
 	.build(function (err) {
 		err && console.log(err)
 	})

@@ -16,6 +16,6 @@
 	},
 	"scripts": {
 		"compress": "find build -type f -not -name '*.gz' -print0 | xargs -0 zopfli -i1000",
-		"upload": "script/upload"
+		"deploy": "aws s3 cp --recursive build/ s3://whymarrh.com/"
 	}
 }

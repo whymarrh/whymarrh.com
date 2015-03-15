@@ -1,3 +1,4 @@
+var autoprefixer = require("autoprefixer");
 var cleanCss = require("metalsmith-clean-css");
 var htmlMinifier = require("metalsmith-html-minifier");
 var ignore = require("metalsmith-ignore");
@@ -21,6 +22,17 @@ Metalsmith(__dirname)
 	.use(title())
 	.use(markdown())
 	.use(template())
+	.use(function (files, metalsmith, done) {
+		var isCss = RegExp.prototype.test.bind(/\.css$/);
+		Object.keys(files).forEach(function (file) {
+			if (!isCss(file)) {
+				return;
+			}
+			var data = files[file];
+			data.contents = new Buffer(autoprefixer.process(data.contents.toString()).css);
+		});
+		done();
+	})
 	.use(cleanCss())
 	.use(htmlMinifier())
 	.use(options.watch && watch())

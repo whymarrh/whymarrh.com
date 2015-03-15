@@ -1,9 +1,13 @@
 body {
-	font-family: "Old Standard", sans-serif;
-	font-size: 1em;
+	font-family: "Old Standard";
+	font-size: 16pt;
 	hyphens: auto;
-	line-height: 1.5em;
+	line-height: 1.6em;
 	margin: 2em auto;
 	max-width: 35em;
 	padding: 0 2em;
+}
+
+code {
+	font-family: "Consolas";
 }

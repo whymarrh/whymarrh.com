@@ -13,14 +13,14 @@ module.exports = function template(opts) {
 				data = files[file]
 				if (
 					   !isHtml(file)
-					|| !data.template
+					|| !data.wasMarkdown
 				) {
 					return complete()
 				}
 				options = _.assign({}, metalsmith.metadata(), data)
 				handlebars(
 					// Template name
-					metalsmith.path('templates', data.template),
+					metalsmith.path('templates', "article.html"),
 					// Options
 					options,
 					// Callback fn

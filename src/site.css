@@ -1,0 +1,9 @@
+body {
+	font-family: "Old Standard", sans-serif;
+	font-size: 1em;
+	hyphens: auto;
+	line-height: 1.5em;
+	margin: 2em auto;
+	max-width: 35em;
+	padding: 0 2em;
+}

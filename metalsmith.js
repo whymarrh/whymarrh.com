@@ -1,18 +1,17 @@
-    cleanCSS = require('metalsmith-clean-css')
-htmlMinifier = require('metalsmith-html-minifier')
-      ignore = require('metalsmith-ignore')
-    markdown = require('metalsmith-markdown')
-  Metalsmith = require('metalsmith')
-       watch = require('metalsmith-watch')
-        nopt = require('nopt')
+var cleanCss = require("metalsmith-clean-css");
+var htmlMinifier = require("metalsmith-html-minifier");
+var ignore = require("metalsmith-ignore");
+var markdown = require("metalsmith-markdown");
+var Metalsmith = require("metalsmith");
+var nopt = require("nopt");
+var sigint = require("./plugins/sigint")(process);
+var template = require("./plugins/template");
+var title = require("./plugins/title");
+var watch = require("metalsmith-watch");
 
-    sigint = require('./plugins/sigint')(process)
-     title = require('./plugins/title')
-  template = require('./plugins/template')
-
-options = nopt({
+var options = nopt({
 	'watch': Boolean
-})
+});
 
 Metalsmith(__dirname)
 	.use(ignore([
@@ -22,9 +21,9 @@ Metalsmith(__dirname)
 	.use(title())
 	.use(markdown())
 	.use(template())
-	.use(cleanCSS())
+	.use(cleanCss())
 	.use(htmlMinifier())
 	.use(options.watch && watch())
 	.build(function (err) {
 		err && console.log(err)
-	})
+	});

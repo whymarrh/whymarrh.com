@@ -1,8 +1,8 @@
 {
 	"private": true,
 	"dependencies": {
-		"autoprefixer": "*",
 		"async": "*",
+		"autoprefixer": "*",
 		"consolidate": "*",
 		"handlebars": "*",
 		"lodash": "*",

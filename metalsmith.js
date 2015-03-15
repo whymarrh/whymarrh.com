@@ -1,7 +1,6 @@
 var autoprefixer = require("autoprefixer");
 var cleanCss = require("metalsmith-clean-css");
 var htmlMinifier = require("metalsmith-html-minifier");
-var ignore = require("metalsmith-ignore");
 var markdown = require("metalsmith-markdown");
 var Metalsmith = require("metalsmith");
 var nopt = require("nopt");
@@ -15,10 +14,6 @@ var options = nopt({
 });
 
 Metalsmith(__dirname)
-	.use(ignore([
-		'drafts/**',
-		'vendor/**'
-	]))
 	.use(title())
 	.use(markdown())
 	.use(template())

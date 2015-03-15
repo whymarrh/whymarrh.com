@@ -9,7 +9,6 @@
 		"metalsmith": "*",
 		"metalsmith-clean-css": "*",
 		"metalsmith-html-minifier": "*",
-		"metalsmith-ignore": "*",
 		"metalsmith-markdown": "*",
 		"metalsmith-watch": "*",
 		"minimatch": "*",

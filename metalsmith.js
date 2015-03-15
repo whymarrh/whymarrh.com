@@ -15,7 +15,6 @@ options = nopt({
 })
 
 Metalsmith(__dirname)
-	.source('source')
 	.use(ignore([
 		'drafts/**',
 		'vendor/**'

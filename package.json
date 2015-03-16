@@ -3,6 +3,7 @@
 	"dependencies": {
 		"async": "*",
 		"autoprefixer": "*",
+		"aws-sdk": "*",
 		"consolidate": "*",
 		"handlebars": "*",
 		"lodash": "*",

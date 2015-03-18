@@ -4,13 +4,17 @@ var htmlMinifier = require("metalsmith-html-minifier");
 var markdown = require("metalsmith-markdown");
 var Metalsmith = require("metalsmith");
 var nopt = require("nopt");
-var sigint = require("./plugins/sigint")(process);
 var template = require("./plugins/template");
 var title = require("./plugins/title");
 var watch = require("metalsmith-watch");
 
 var options = nopt({
 	'watch': Boolean
+});
+
+process.on("SIGINT", function () {
+	console.log("");
+	process.exit(0);
 });
 
 Metalsmith(__dirname)

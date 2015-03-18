@@ -5,6 +5,7 @@
 		"autoprefixer": "*",
 		"aws-sdk": "*",
 		"babel": "*",
+		"bluebird": "*",
 		"consolidate": "*",
 		"handlebars": "*",
 		"lodash": "*",

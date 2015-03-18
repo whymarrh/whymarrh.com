@@ -10,9 +10,7 @@ var createCfInvalidation = function createCfInvalidation(paths) {
 		// Defaults
 	})
 	.then(function (list) {
-		return (list.Items || []).filter(_ => _.Aliases.Items[0] === domain).map(_ => _.Id).pop();
-	})
-	.then(function (id) {
+		var id = (list.Items || []).filter(_ => _.Aliases.Items[0] === domain).map(_ => _.Id).pop();
 		return Promise.promisify(cloudFront.createInvalidation, cloudFront)({
 			DistributionId: id,
 			InvalidationBatch: {
@@ -30,10 +28,7 @@ Promise.promisify(s3.listObjects, s3)({
 	Bucket: domain
 })
 .then(function (data) {
-	return data.Contents.map(_ => _.Key);
-})
-.then(function (keys) {
-	return createCfInvalidation(keys);
+	return createCfInvalidation(data.Contents.map(_ => _.Key));
 })
 .caught(function (err) {
 	console.error(err.stack);

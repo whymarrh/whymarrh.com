@@ -8,7 +8,7 @@ This repo contains the source files for [whymarrh.com][1] – plain ol' HTML and
 
 ## Build
 
-- Install dependencies by running the usual: `npm install`.
+- Install dependencies by running the usual: `npm install`
 - Compile: `node metalsmith.js`
 - Build files and watch for changes: `node metalsmith.js --watch`
 - To upload site to S3: `npm run deploy`

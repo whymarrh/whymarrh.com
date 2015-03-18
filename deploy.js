@@ -35,7 +35,6 @@ Promise.promisify(s3.listObjects, s3)({
 .then(function (keys) {
 	return createCfInvalidation(keys);
 })
-.tap(console.log)
 .caught(function (err) {
 	console.error(err.stack);
 	process.exit(1);

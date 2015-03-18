@@ -4,6 +4,7 @@
 		"async": "*",
 		"autoprefixer": "*",
 		"aws-sdk": "*",
+		"babel": "*",
 		"consolidate": "*",
 		"handlebars": "*",
 		"lodash": "*",
@@ -17,6 +18,6 @@
 	},
 	"scripts": {
 		"compress": "find build -type f -not -name '*.gz' -print0 | xargs -0 zopfli -i1000",
-		"deploy": "test -d build && aws s3 cp --recursive build/ s3://whymarrh.com/ || echo \"Nothing to deploy\""
+		"deploy": "test -d build && aws s3 sync --delete build s3://whymarrh.com && babel-node deploy.js"
 	}
 }

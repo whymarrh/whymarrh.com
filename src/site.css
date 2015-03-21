@@ -9,6 +9,6 @@ body {
 }
 
 code {
-	font-family: "Consolas";
+	font-family: "Consolas", monospace;
 	font-size: 15pt;
 }

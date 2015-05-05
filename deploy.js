@@ -27,9 +27,7 @@ var createCfInvalidation = function createCfInvalidation(paths) {
 Promise.promisify(s3.listObjects, s3)({
 	Bucket: domain
 })
-.then(function (data) {
-	return createCfInvalidation(data.Contents.map(_ => _.Key));
-})
+.then(data => createCfInvalidation(data.Contents.map(_ => _.Key)))
 .caught(function (err) {
 	console.error(err.stack);
 	process.exit(1);

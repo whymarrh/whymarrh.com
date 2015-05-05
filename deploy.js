@@ -17,7 +17,7 @@ var createCfInvalidation = function createCfInvalidation(paths) {
 				CallerReference: (new Date() * 1).toString(),
 				Paths: {
 					Quantity: paths.length,
-					Items: paths.map(o => '/' + o)
+					Items: paths.map(o => "/" + o)
 				}
 			}
 		});

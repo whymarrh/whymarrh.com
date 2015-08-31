@@ -19,6 +19,14 @@ process.on("SIGINT", function () {
 });
 
 Metalsmith(__dirname)
+	.use(function (files, _, done) {
+		var names = Object.keys(files);
+		names.forEach(function (name) {
+			if (~name.indexOf('README'))
+				delete files[name];
+		});
+		done();
+	})
 	.use(title())
 	.use(markdown({
 		html: true,

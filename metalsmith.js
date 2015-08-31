@@ -9,7 +9,8 @@ var title = require("./plugins/title");
 var watch = require("metalsmith-watch");
 
 var options = nopt({
-	'watch': Boolean
+	'watch': Boolean,
+	'quiet': Boolean,
 });
 
 process.on("SIGINT", function () {
@@ -37,7 +38,9 @@ Metalsmith(__dirname)
 	})
 	.use(cleanCss())
 	.use(htmlMinifier())
-	.use(options.watch && watch())
+	.use(options.watch && watch(options.quiet && {
+		log: function () {}
+	}))
 	.build(function (err) {
 		err && console.log(err)
 	});

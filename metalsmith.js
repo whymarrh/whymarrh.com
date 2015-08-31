@@ -1,7 +1,7 @@
 var autoprefixer = require("autoprefixer");
 var cleanCss = require("metalsmith-clean-css");
 var htmlMinifier = require("metalsmith-html-minifier");
-var markdown = require("metalsmith-markdown");
+var markdown = require("metalsmith-markdownit");
 var Metalsmith = require("metalsmith");
 var nopt = require("nopt");
 var template = require("./plugins/template");
@@ -19,7 +19,10 @@ process.on("SIGINT", function () {
 
 Metalsmith(__dirname)
 	.use(title())
-	.use(markdown())
+	.use(markdown({
+		html: true,
+		typographer: true
+	}))
 	.use(template())
 	.use(function (files, metalsmith, done) {
 		var isCss = RegExp.prototype.test.bind(/\.css$/);

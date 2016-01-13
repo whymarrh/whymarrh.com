@@ -12,6 +12,8 @@ Vagrant.configure(2) do |config|
             git clone git://github.com/whymarrh/dotfiles .files
             VAGRANT=true .files/install 2>&1
         fi
+        sudo apt-get -y install python-pip
+        sudo pip install --upgrade awscli
     )
 
     config.vm.provider "virtualbox" do |virtualbox|

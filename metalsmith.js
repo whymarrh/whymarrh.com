@@ -1,14 +1,14 @@
-var autoprefixer = require("autoprefixer");
-var cleanCss = require("metalsmith-clean-css");
-var htmlMinifier = require("metalsmith-html-minifier");
-var markdown = require("metalsmith-markdownit");
-var Metalsmith = require("metalsmith");
-var nopt = require("nopt");
-var template = require("./plugins/template");
-var title = require("./plugins/title");
-var watch = require("metalsmith-watch");
+const autoprefixer = require("autoprefixer");
+const cleanCss = require("metalsmith-clean-css");
+const htmlMinifier = require("metalsmith-html-minifier");
+const markdown = require("metalsmith-markdownit");
+const Metalsmith = require("metalsmith");
+const nopt = require("nopt");
+const template = require("./plugins/template");
+const title = require("./plugins/title");
+const watch = require("metalsmith-watch");
 
-var options = nopt({
+const options = nopt({
 	'watch': Boolean,
 	'quiet': Boolean,
 });
@@ -20,7 +20,7 @@ process.on("SIGINT", function () {
 
 Metalsmith(__dirname)
 	.use(function (files, _, done) {
-		var names = Object.keys(files);
+		const names = Object.keys(files);
 		names.forEach(function (name) {
 			if (~name.indexOf('README'))
 				delete files[name];
@@ -34,12 +34,12 @@ Metalsmith(__dirname)
 	}))
 	.use(template())
 	.use(function (files, metalsmith, done) {
-		var isCss = RegExp.prototype.test.bind(/\.css$/);
+		const isCss = RegExp.prototype.test.bind(/\.css$/);
 		Object.keys(files).forEach(function (file) {
 			if (!isCss(file)) {
 				return;
 			}
-			var data = files[file];
+			const data = files[file];
 			data.contents = new Buffer(autoprefixer.process(data.contents.toString()).css);
 		});
 		done();

@@ -1,4 +1,4 @@
-var isMarkdown = RegExp.prototype.test.bind(/(?:\.md)|(?:\.markdown)$/);
+const isMarkdown = RegExp.prototype.test.bind(/(?:\.md)|(?:\.markdown)$/);
 // Matches both H1 formats:
 //
 //     # This format #
@@ -9,7 +9,7 @@ var isMarkdown = RegExp.prototype.test.bind(/(?:\.md)|(?:\.markdown)$/);
 //     ===========
 //
 // Only matches the first occurence of either
-var headerRegExp = /(?:(?:^|\n)\s*\#\s*([^\n]+?)\s*\#?\s*(?:\n+|$))|(?:(?:^|\n)([^\n]+?)\n[=]{3,}(?:\n+|$))/;
+const headerRegExp = /(?:(?:^|\n)\s*\#\s*([^\n]+?)\s*\#?\s*(?:\n+|$))|(?:(?:^|\n)([^\n]+?)\n[=]{3,}(?:\n+|$))/;
 
 module.exports = function title(opts) {
 	return function (files, metalsmith, done) {
@@ -17,9 +17,9 @@ module.exports = function title(opts) {
 			if (!isMarkdown(file)) {
 				return;
 			}
-			var data = files[file];
+			const data = files[file];
 			data.wasMarkdown = true;
-			var results = headerRegExp.exec(data.contents.toString());
+			const results = headerRegExp.exec(data.contents.toString());
 			if (results && results.length > 1) {
 				data.title = results[1] || results[2];
 			}

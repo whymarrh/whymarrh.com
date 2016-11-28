@@ -14,7 +14,7 @@ Hi there! I'm Whymarrh Whitby, a software developer. I spend a lot of time in fr
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svgdefs.svg#icon-stack-overflow"></use>
         </svg>
     </a>
-    <a href="http://codepen.io/whymarrh/">
+    <a href="https://codepen.io/whymarrh/">
         <svg class="icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="svgdefs.svg#icon-codepen"></use>
         </svg>

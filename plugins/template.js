@@ -1,19 +1,19 @@
-var async = require('async');
-var handlebars = require('consolidate').handlebars;
-var _ = require('lodash');
+const async = require('async');
+const handlebars = require('consolidate').handlebars;
+const _ = require('lodash');
 
-var isHtml = RegExp.prototype.test.bind(/\.html$/);
+const isHtml = RegExp.prototype.test.bind(/\.html$/);
 
 module.exports = function template(opts) {
 	return function (files, metalsmith, done) {
-		var teplateFile = function teplateFile(file, done) {
-			var data = files[file];
+		const teplateFile = function teplateFile(file, done) {
+			const data = files[file];
 
 			if (!isHtml(file) || !data.wasMarkdown) {
 				return done();
 			}
 
-			var options = _.assign({}, metalsmith.metadata(), data);
+			const options = _.assign({}, metalsmith.metadata(), data);
 			handlebars(
 				// Template name
 				metalsmith.path('templates', ~file.indexOf('talks') ? 'slides.html' : 'article.html'),

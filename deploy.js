@@ -1,11 +1,11 @@
-var Promise = require("bluebird");
-var AWS = require("aws-sdk");
+const Promise = require("bluebird");
+const AWS = require("aws-sdk");
 
-var s3 = new AWS.S3();
-var cloudFront = new AWS.CloudFront();
-var domain = "whymarrh.com";
+let s3 = new AWS.S3();
+const cloudFront = new AWS.CloudFront();
+const domain = "whymarrh.com";
 
-var createCfInvalidation = function createCfInvalidation(distributionId, ...items) {
+const createCfInvalidation = function createCfInvalidation(distributionId, ...items) {
 	return Promise.promisify(cloudFront.createInvalidation, cloudFront)({
 		DistributionId: distributionId,
 		InvalidationBatch: {

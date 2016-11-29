@@ -20,7 +20,7 @@
   },
   "scripts": {
     "compress": "find build -type f -not -name '*.gz' -print0 | xargs -0 zopfli -i1000",
-    "deploy": "bash -x deploy",
+    "deploy": "npm test && bash -x deploy",
     "test": "node metalsmith.js"
   }
 }

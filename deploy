@@ -10,5 +10,5 @@ command -v jq  &> /dev/null
 METALSMITH_FOLDER="${1:-build}"
 DOMAIN="${2:-whymarrh.com}"
 DISTRIBUTION_ID=$(aws cloudfront list-distributions | jq -r "if .DistributionList.Items[].Aliases.Items[] == \"$DOMAIN\" then .DistributionList.Items[].Id else \"\" end")
+[[ -d "$METALSMITH_FOLDER" ]] && aws s3 sync --delete "$METALSMITH_FOLDER" "s3://${DOMAIN}"
 [[ ! -z "$DISTRIBUTION_ID" ]] && aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths '/*'
-[[ -d "$METALSMITH_FOLDER" ]] && aws s3 sync --delete build "s3://${DOMAIN}"

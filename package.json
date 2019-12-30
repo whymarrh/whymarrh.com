@@ -7,7 +7,7 @@
     "babel": "^6.5.2",
     "bluebird": "^3.3.0",
     "consolidate": "^0.14.0",
-    "handlebars": "^4.0.5",
+    "handlebars": "^4.3.0",
     "lodash": "^4.3.0",
     "metalsmith": "^2.1.0",
     "metalsmith-clean-css": "^2.0.0",

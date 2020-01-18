@@ -1,4 +1,6 @@
 whymarrh.com
 ============
 
-This repo contains the source files for [whymarrh.com][1] – plain ol' HTML and CSS.
+This repo contains the source files for [whymarrh.com][1].
+
+  [1]:https://whymarrh.com

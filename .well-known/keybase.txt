@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/whymarrh
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://whymarrh.com
+  * I am whymarrh (https://keybase.io/whymarrh) on keybase.
+  * I have a public key ASDvATuKuBF_Q8uauOaRThLUYqAwKVvHZ9d23lE_GdX57go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012096c386d0245f12fe43130ad3832f3a1ffaf3a7c5e555ac2d797f51bcf1d4ef300a",
+      "host": "keybase.io",
+      "kid": "0120ef013b8ab8117f43cb9ab8e6914e12d462a030295bc767d776de513f19d5f9ee0a",
+      "uid": "c7605d442f90bea1f6cb14ef45dcfe19",
+      "username": "whymarrh"
+    },
+    "merkle_root": {
+      "ctime": 1573328684,
+      "hash": "ceaea814e79c444e35e5a8139a7c6a9e02dc897e0f071dbaa22f483017d5a4708b0f973dccc705afeef180d32c641fb665ef170bc1289c7dc6c003b8f7416212",
+      "hash_meta": "5e58cdd249d481a7718e030b790b6f7032f9aa6bc25e40054d95fb6dac6f83a1",
+      "seqno": 9033394
+    },
+    "service": {
+      "entropy": "/TO60F3j9565vqcs2BSeh1W0",
+      "hostname": "whymarrh.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.7.2"
+  },
+  "ctime": 1573328691,
+  "expire_in": 504576000,
+  "prev": "2703e379bb2383b71d860462f180c91b1d68bde00e7b818a7ccd0fc1b4631ad0",
+  "seqno": 18,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg7wE7irgRf0PLmrjmkU4S1GKgMClbx2fXdt5RPxnV+e4Kp3BheWxvYWTESpcCEsQgJwPjebsjg7cdhgRi8YDJGx1oveAOe4GKfM0PwbRjGtDEIOwzrzUeVnejqTMmvEFgwdXp0l2JJ3thFOIP+DDlhRrfAgHCo3NpZ8RAixUlwNSZzKrvIVKeM+MnbJJ5YwjE77IfI6rVChLDCp+f+HlTkZ81ev3WwGUvxjpClCKEBRBpUGPWSzbsYAcFB6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIG2pRDfWQWVQiVcSE9vOcNw8CmdLxDicNhSbaMd5a3lGo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/whymarrh
+
+==================================================================

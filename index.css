@@ -59,10 +59,8 @@ p {
 }
 
 hr {
-    width: 6rem;
-    height: 1px;
-    margin: 2.5rem 0;
     border: 0;
+    margin: 2.5rem 0;
 }
 
 .links a {

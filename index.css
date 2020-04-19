@@ -65,11 +65,13 @@ hr {
 
 .links a {
     margin-right: .5rem;
+    font-size: 1.5rem;
 }
 
 .links a svg {
-    width: 24px;
-    height: 24px;
+    width: 1em;
+    height: 1em;
+    vertical-align: -.125em;
 }
 
 .links a:hover {

@@ -9,7 +9,7 @@ body {
 }
 
 @media (min-width: 500px) {
-    .masthead {
+    header {
         max-width: 450px;
     }
     body {
@@ -61,6 +61,13 @@ p {
 hr {
     border: 0;
     margin: 2.5rem 0;
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 .links a {

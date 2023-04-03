@@ -84,3 +84,7 @@ hr {
 .links a:hover {
     text-decoration: none;
 }
+
+.display-none {
+    display: none;
+}

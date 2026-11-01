@@ -1,0 +1,45 @@
+name: Static Analysis
+
+on:
+  push:
+    branches:
+      - main
+      - gh-pages
+  pull_request:
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  zizmor:
+    name: zizmor
+    runs-on: ubuntu-26.04
+    permissions:
+      contents: read # Required to clone the repo
+    env:
+      ZIZMOR_VERSION: v1.31.1
+      ZIZMOR_ARCHIVE: zizmor-x86_64-unknown-linux-gnu.tar.gz
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Download zizmor
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          gh release download "${ZIZMOR_VERSION}" \
+            --repo zizmorcore/zizmor \
+            --pattern "${ZIZMOR_ARCHIVE}" \
+            --dir "${RUNNER_TEMP}"
+          gh attestation verify "${RUNNER_TEMP}/${ZIZMOR_ARCHIVE}" \
+            --repo zizmorcore/zizmor \
+            --signer-workflow zizmorcore/zizmor/.github/workflows/release-binaries.yml
+          tar -xzf "${RUNNER_TEMP}/${ZIZMOR_ARCHIVE}" -C "${RUNNER_TEMP}"
+      - name: Run zizmor
+        run: |-
+          "${RUNNER_TEMP}/zizmor" --offline --persona=pedantic .

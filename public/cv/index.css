@@ -117,8 +117,8 @@ address li + li::before {
 
 /*
  * Sections: each entry is a heading and details, with the dates and tags
- * pinned to the right. The entry stays in normal flow (rather than a grid) so
- * a page break can fall between bullets but never right after a heading.
+ * pinned to the right. Each entry prints whole on one page. The entry stays in
+ * normal flow rather than a grid so Chrome follows the page break rules.
  */
 
 h2 {
@@ -130,6 +130,7 @@ h2 {
 article {
 	position: relative;
 	padding-right: 16.5rem;
+	break-inside: avoid;
 }
 
 /* "~" rather than "+", so the gap holds even with the toggle between entries */
@@ -245,6 +246,13 @@ h3 :is(a, b) {
 
 @page {
 	margin: 45pt 48pt;
+
+	/* Page numbers like "p. 2 of 4" in the bottom right corner */
+	@bottom-right {
+		content: "p. " counter(page) " of " counter(pages);
+		color: #333;
+		font: 0.75rem var(--sans);
+	}
 }
 
 @media print {

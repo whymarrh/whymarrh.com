@@ -49,12 +49,11 @@
 					company builds and ships secure software.
 				</p>
 				<p>
-					For over 14 years, I’ve been building well-crafted, secure software
-					and
+					I build well-crafted, secure software, and I’ve spent over 14 years
 					<a href="https://stackoverflow.com/users/1267663/whymarrh"
-						>helping others solve their problems</a
-					>. On every team, I take the time to understand how things really
-					work, and I help the people around me level up.
+						>helping other developers learn and grow</a
+					>. On every team, I take the time to understand systems before I
+					change them, and I help the people around me level up.
 				</p>
 			</div>
 
@@ -92,33 +91,29 @@
 						<ul>
 							<li>
 								Started and lead 1Password’s company-wide software supply chain
-								security initiative. Its workstreams run across teams, from
-								package registries and software bills of materials (SBOMs) to
-								signed, hardened release pipelines, each with its own owner. I
-								ran the vendor evaluations and made the foundational decisions.
+								security initiative. Its workstreams run across multiple teams,
+								from package registries and software bills of materials (SBOMs)
+								to hardened release pipelines. I wrote the initiative’s design
+								doc, ran the vendor evaluations, and made the foundational
+								decisions.
 							</li>
 							<li>
-								Own the company’s central package registry for 8 ecosystems. It
-								blocks malicious and typosquatted packages, holds back brand-new
-								releases, and lets build pipelines sign in without long-lived
-								tokens. I also moved the company from Yarn Classic to pnpm,
-								which does not run install scripts by default.
+								Launched the company’s central package registry to block
+								compromised packages and enforce policy decisions. I also moved
+								the company from Yarn Classic to pnpm, which does not run
+								install scripts by default.
 							</li>
 							<li>
 								Led application security for 1Password’s move from GitLab to
 								GitHub. I wrote the GitHub Actions security policy, now enforced
-								company-wide, which allows only vetted actions pinned to commit
-								hashes. I also turned on secret scanning and push protection,
-								and wrote the decision to isolate code signing from build
-								monitoring.
+								company-wide, which requires vetted actions. I also turned on
+								secret scanning and push protection, and wrote the decision to
+								isolate code signing from build monitoring.
 							</li>
 							<li>
-								Rolled out static analysis on the main repositories, tuned to
-								act as a security-minded reviewer rather than a gate. It scans
-								each code change for insecure patterns and comments on the exact
-								line, with one-click and AI-suggested fixes. I also moved it to
-								open-source Opengrep without losing coverage, freeing budget for
-								supply chain tooling.
+								Rolled out centralized static analysis across repositories using
+								Opengrep. It scans each code change for insecure patterns and
+								helps educate developers with suggested fixes.
 							</li>
 							<li>
 								Set up a weekly triage of code, dependency, and cloud
@@ -152,39 +147,33 @@
 					<div class="details">
 						<p>
 							I was the Staff Developer on the team that runs 1Password’s
-							subscriptions. Over 3 years, I moved 1Password’s billing from
+							subscriptions. Over three years, I moved 1Password’s billing from
 							serving a single product to a foundation for its multi-product
 							future.
 						</p>
 						<ul>
 							<li>
-								Wrote the plan that took the team’s engineering direction from
-								research to roadmap. It covered core principles, monthly updates
-								to leadership, and a future architecture with queued webhooks,
-								idempotent payment calls, consistency checks, and an audit log.
-							</li>
-							<li>
-								Wrote the technical roadmap that leadership adopted, which
-								focused the team on a new billing platform built for more than
-								one product. I also helped decide how to deploy it.
+								Wrote the team’s engineering plans from research to roadmap,
+								covering design principles, data consistency, and audit logging.
 							</li>
 							<li>
 								Led incident response and blameless reviews, and turned the
 								lessons into health checks, dashboards, build pipeline fixes,
-								and a deploy freeze policy. I designed the fix (pessimistic
-								locking) that ended a whole class of payment worker failures,
-								and made rollbacks 2 clicks.
+								and deployment policies. I also designed and deployed fixes for
+								persistent payment processing failures, and made rollbacks two
+								clicks.
 							</li>
 							<li>
 								Expanded the web app’s OpenAPI tooling, and built a merge check
-								on it that blocks accidental breaking changes to API contracts.
-								It solved a class of incidents teams kept hitting, where an API
-								change broke clients like the browser extension. It has since
-								been proposed as a company-wide model.
+								on top of it that prevents accidental breaking changes to API
+								contracts. It solved a class of incidents for teams, where an
+								API change broke clients like the browser extension. It has
+								since been proposed as a company-wide model.
 							</li>
 							<li>
 								Wrote the team’s code review guide and set up code owners, so
-								every change reaches a reviewer who understands it.
+								the team can have a sustainable, high-quality code review
+								process.
 							</li>
 						</ul>
 					</div>
@@ -207,40 +196,38 @@
 					<div class="details">
 						<p>
 							I joined 1Password in November 2020 on the User Onboarding &amp;
-							Education team. Working with designers, researchers, writers, and
-							other developers, I helped rebuild how people sign up for and set
-							up 1Password. I built full-stack features in TypeScript and Go. In
-							2022 the team turned to Knox, 1Password’s new design system, and I
-							became its Tech Lead and Architect. I was promoted to Staff
-							Developer that April.
+							Education team. Working cross-functionally with designers,
+							researchers, and the content team, I helped rebuild how people
+							sign up for and set up 1Password. I built full-stack features in
+							TypeScript and Go. In 2022 the team developed 1Password’s new
+							design system, Knox, and I became its Tech Lead. I was promoted to
+							Staff Developer that April.
 						</p>
 						<ul>
 							<li>
 								Shipped a redesigned signup flow, invites during signup,
 								suggested vaults, and onboarding cards. Over 2021, signup
 								completion went from 59% to 71% and paid conversion from 31% to
-								40%. Business and team accounts also got through signup about
-								40% faster.
+								40%. Business and team accounts also completed signup about 40%
+								faster.
 							</li>
 							<li>
-								Designed and built the server side of vault invites. When admins
-								invite someone, they can choose which shared vaults the person
-								gets, so teammates have the passwords they need as soon as they
-								join. That meant the database schema, the invite state machine,
-								the API, and the rule that no one sees a vault they cannot
-								access.
+								Designed and built the backend of the vault invitations feature.
+								When admins invite someone, they can choose which shared vaults
+								the person gets, so teammates have the passwords they need as
+								soon as they join.
 							</li>
 							<li>
-								Helped level up quality across the web app’s teams. I built test
+								Helped champion quality across the web app’s teams. I built test
 								foundations that let teams test features as users with different
-								permissions, and updated the shared testing guide. I also helped
-								fix the build system every team relied on.
+								permissions, and developed a shared testing guide. I also helped
+								fix build tools every team relied on.
 							</li>
 							<li>
 								Led Knox to its first design tokens (shared type, spacing, and
-								colour values) and React components, and helped get it to v1. I
-								also planned its part in the admin console’s cross-team
-								navigation redesign.
+								colour values) and a React component library. I also planned its
+								adoption across teams, including a new dashboard navigation
+								redesign.
 							</li>
 						</ul>
 					</div>
@@ -268,44 +255,32 @@
 								href="https://github.com/MetaMask/metamask-extension/pulls?q=author%3Awhymarrh+is%3Amerged"
 								>core contributors</a
 							>
-							to MetaMask’s browser extension, the crypto wallet that connects
-							people to Ethereum apps. I was also among its most active
-							reviewers, and helped dozens of outside contributors get their
-							changes merged. By the time I left, MetaMask had passed 1 million
-							monthly users.
+							to MetaMask’s browser extension, the Ethereum wallet that
+							connected people to decentralized apps. I was among its most
+							active reviewers, and helped dozens of outside contributors get
+							their changes merged. When I left, MetaMask had grown to over 1
+							million monthly users.
 						</p>
 						<ul>
 							<li>
-								Moved every user from the old interface to a new React UI, in
-								stages. I first added end-to-end tests and missing features like
-								contract deployment, then made it the default for new installs
-								and migrated everyone else in v6.0. Deleting the old UI removed
-								about 20,000 lines of code, leaving one interface to maintain
-								instead of two.
+								Moved every user to a new React UI after completing A/B testing,
+								reaching feature parity, and adding an extensive test suite.
+								Deleting the old UI removed about 20,000 lines of code, leaving
+								one interface to maintain instead of two.
 							</li>
 							<li>
-								Built the screens people use to decide which sites can see their
-								accounts. That included the connect screen for EIP-1102 (the
-								standard for sites asking first), privacy mode on by default,
-								and v8.0’s connected sites and accounts views.
+								Built the interface people use to decide which sites can see
+								their accounts. That included the connect screen for
+								<a href="https://eips.ethereum.org/EIPS/eip-1102">EIP-1102</a>
+								(the standard for sites asking first), privacy mode on by
+								default, and v8.0’s connected sites and accounts views.
 							</li>
 							<li>
-								Found that a stuck transaction’s history could grow without
-								limit and slow the whole wallet, and shipped fixes in a hotfix.
-								I then capped how many transactions the wallet sends to its
-								interface. For a wallet with 3,000 transactions, each update
-								dropped from about 4.5 seconds to 90 milliseconds, about 50
-								times faster.
-							</li>
-							<li>
-								Reworked phishing protection so people can get past a false
-								positive. I also moved blocklist updates to a content delivery
-								network, polled hourly instead of every 3 minutes.
-							</li>
-							<li>
-								Showed Ethereum Name Service names for addresses, and built the
-								Sai-to-Dai migration notice that shipped the day
-								multi-collateral Dai launched.
+								Diagnosed and fixed complex bug reports from the community,
+								including performance issues. In one example, I traced a
+								persistent report of high CPU and memory use and shipped a fix.
+								For a wallet with 3,000 transactions, each update became about
+								50 times faster.
 							</li>
 							<li>
 								Automated releases, moved the codebase to ES modules and JSX,
@@ -349,19 +324,14 @@
 							I built
 							<a href="https://www.gov.nl.ca/releases/2018/tcii/0606n07/"
 								>Newfoundland and Labrador’s Iceberg Finder</a
-							>, a live map of the icebergs off the coast. People share photos,
-							and the province’s visitor centres moderate them. That meant the
-							map, the photo integrations, the Node.js APIs behind them, and the
-							DigitalOcean servers it all ran on. The site and its campaign won
-							5 awards, including
+							>, a live map of the icebergs off the coast. People can share
+							photos, and the province’s visitor centres moderate them. I wrote
+							both the interface and the backend Node.js APIs to power it, and
+							maintained all the DigitalOcean infrastructure. The site and its
+							campaign won five awards, including
 							<a
 								href="https://issuu.com/targetnl/docs/2019_ice_awards_book_final/80"
-								>gold for Website at the 2019 ICE Awards</a
-							>
-							and
-							<a
-								href="https://enter.omnisam.com/gallery-detail.aspx?gallery_id=2C01AF66-8224-4EA0-8205-47902C7261F4&amp;s=g&amp;comp_id=60B802B2-E08C-4F8E-9459-1BC45A26B92B&amp;entry_id=796481&amp;file_upload_id=1215417&amp;award_id=8712~8715&amp;pn=1"
-								>platinum at the 2018 HSMAI Adrian Awards</a
+								>gold at the 2019 ICE Awards</a
 							>.
 						</p>
 					</div>
@@ -417,7 +387,8 @@
 								href="https://gazette.mun.ca/student-life/international-champions/"
 								>placed first overall at the university level</a
 							>
-							of the 2016 MATE International ROV Competition, against 30 teams.
+							of the 2016 MATE International ROV Competition, against 30 teams
+							from around the world.
 						</p>
 					</div>
 				</article>
@@ -447,9 +418,9 @@
 								>an ice surveillance system</a
 							>
 							that tracked icebergs in the Atlantic and forecast their drift for
-							offshore ships. That meant the C# data pipeline and the ArcGIS
-							map. I also maintained weather forecasting tools and Linux
-							servers, on-premise and in AWS.
+							offshore ships. I wrote the C# data processing pipeline and the
+							ArcGIS web mapping application. I also maintained weather
+							forecasting tools and Linux servers, both on-premise and in AWS.
 						</p>
 					</div>
 				</article>
@@ -478,13 +449,13 @@
 					</div>
 					<div class="details">
 						<p>
-							I built 2 small privacy tools based on how
+							I built two small privacy tools based on how
 							<a href="https://signal.org/blog/signal-and-giphy-update/"
 								>Signal keeps GIF search private</a
 							>. Private Relay is a TCP proxy that hides your IP address without
 							being able to read your traffic. Private Request splits each
-							download into padded range requests, so its size does not give
-							away what you fetched.
+							download into padded range requests, so its size does not reveal
+							what you fetched.
 						</p>
 					</div>
 				</article>
@@ -502,12 +473,10 @@
 					<div class="details">
 						<p>
 							Lake Maps NL set out to map Grand Lake’s shoreline from before a
-							1920s dam raised the water 11 metres. The sonar picked up what
-							looked like the sunken railway bridge, but with too many piers.
-							Archive photos revealed a forgotten temporary dam just upstream,
-							and side-scan sonar later captured both, including all 21 of the
-							dam’s piers. I co-wrote this paper about the find with 4 other
-							members, published in
+							1920s dam raised the water eleven metres. Sonar of the sunken
+							railway bridge showed too many piers, and archive photos revealed
+							a forgotten temporary dam about fifty metres upstream. I co-wrote
+							this paper about our finding with four other members, published in
 							<cite>The Journal of Ocean Technology</cite>
 							(volume 12, number 4).
 						</p>
@@ -527,9 +496,9 @@
 					</div>
 					<div class="details">
 						<p>
-							I pulled this small Java event library out of the robot’s control
-							software. It broadcasts events over UDP with ordering guarantees,
-							and has 99% mutation test coverage.
+							I extracted this Java event library from the control software for
+							an underwater remotely operated vehicle. It broadcasts events over
+							UDP with ordering guarantees, and has 99% mutation test coverage.
 						</p>
 					</div>
 				</article>

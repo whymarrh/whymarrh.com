@@ -132,8 +132,24 @@ article {
 	padding-right: 16.5rem;
 }
 
-article + article {
+/* "~" rather than "+", so the gap holds even with the toggle between entries */
+article ~ article {
 	margin-top: 1.25rem;
+}
+
+/* "Show older work experience": unchecking it hides every entry after it, on screen and in print */
+.toggle {
+	margin: 1.25rem 0;
+	font-family: var(--sans);
+}
+
+.toggle input {
+	margin: 0 0.4rem 0 0;
+	accent-color: var(--accent);
+}
+
+.toggle:has(input:not(:checked)) ~ article {
+	display: none;
 }
 
 h3,
@@ -232,6 +248,10 @@ h3 :is(a, b) {
 }
 
 @media print {
+	.toggle {
+		display: none;
+	}
+
 	:root {
 		font-size: 10pt;
 	}

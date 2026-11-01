@@ -51,10 +51,6 @@ a {
 	.meta & {
 		text-decoration: none;
 	}
-
-	@media print {
-		text-decoration: none;
-	}
 }
 
 ul {

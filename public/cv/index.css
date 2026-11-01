@@ -1,0 +1,235 @@
+/* Sizes are in rem: 16px on screen, 10pt in print. */
+
+:root {
+    --sans: "Source Sans 3", "Segoe UI", "Myriad Pro", system-ui, sans-serif;
+    --serif: "Source Serif 4", Charter, "Sitka Text", Cambria, Georgia, serif;
+    --mono: "Space Mono", ui-monospace, Menlo, Consolas, monospace;
+    --accent: #50a2ea;
+
+    color: #333;
+    font: 1rem/1.3 var(--serif);
+}
+
+body {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+h1, h2, h3, p, ul {
+    margin: 0;
+}
+
+h1, h2, h3, hgroup p, .meta p {
+    font-family: var(--sans);
+}
+
+a {
+    color: inherit;
+    text-decoration-color: var(--accent);
+    text-underline-offset: .2em;
+}
+
+h3 a, address a {
+    text-decoration: none;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+p, li {
+    break-inside: avoid;
+}
+
+li::marker {
+    font-size: .6em;
+}
+
+code {
+    font: .85em var(--mono);
+}
+
+/* Name, title, and contact details */
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: last baseline;
+    gap: .5rem 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+hgroup p {
+    font-size: 1.6rem;
+}
+
+address {
+    font-style: italic;
+    line-height: 1.5;
+    text-align: right;
+}
+
+address ul {
+    padding: 0;
+    list-style: none;
+}
+
+address li {
+    display: inline;
+}
+
+address li + li::before {
+    content: " | ";
+}
+
+/* Introduction: a short note beside a summary */
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 2rem;
+}
+
+/* Both columns stretch to the taller one, with their text centred vertically */
+.intro p {
+    align-content: center;
+}
+
+.note {
+    padding: 0 2rem 0 1rem;
+    border-left: 3px solid var(--accent);
+    font-style: italic;
+}
+
+/*
+ * Sections: each entry is a heading and details, with the dates and tags
+ * pinned to the right. The entry stays in normal flow (rather than a grid) so
+ * a page break can fall between bullets but never right after a heading.
+ */
+
+h2 {
+    margin: 2.25rem 0 1.25rem;
+    font-size: 1.4rem;
+    break-after: avoid;
+}
+
+article {
+    position: relative;
+    padding-right: 16.5rem;
+}
+
+article + article {
+    margin-top: 1.25rem;
+}
+
+h3, .meta p {
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    line-height: 1.25;
+}
+
+h3 {
+    font-weight: normal;
+    break-after: avoid;
+}
+
+h3 :is(a, b) {
+    font-weight: 600;
+}
+
+.meta {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15rem;
+    text-align: right;
+}
+
+.meta p {
+    font-weight: bold;
+}
+
+.meta ul {
+    padding: 0;
+    list-style: none;
+    color: var(--accent);
+    font: .8rem/1.5 var(--mono);
+    text-wrap: balance;
+}
+
+.meta li {
+    display: inline;
+    white-space: nowrap;
+}
+
+.meta li:not(:last-child)::after {
+    content: ",";
+}
+
+.details > * + * {
+    margin-top: .5rem;
+}
+
+/* Keep an entry's opening paragraph on the same page as its first bullet */
+.details > ul {
+    break-before: avoid;
+}
+
+/* Small screens: one column */
+
+@media (width < 40rem) {
+    header, .intro {
+        display: block;
+    }
+
+    address {
+        margin-top: .5rem;
+        text-align: left;
+    }
+
+    .note {
+        margin: 1.5rem 0 1rem;
+    }
+
+    article {
+        padding-right: 0;
+    }
+
+    .meta {
+        position: static;
+        width: auto;
+        margin-bottom: .75rem;
+        text-align: left;
+    }
+
+    .meta p {
+        margin: 0;
+        font-size: 1rem;
+    }
+}
+
+/* Print: whatever paper the print dialog picks (A4 and US Letter both fit) */
+
+@page {
+    margin: 45pt 48pt;
+}
+
+@media print {
+    :root {
+        font-size: 10pt;
+    }
+
+    body {
+        max-width: none;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

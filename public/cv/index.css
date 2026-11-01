@@ -37,7 +37,8 @@ a {
 }
 
 h3 a,
-address a {
+address a,
+.meta a {
 	text-decoration: none;
 }
 
@@ -190,8 +191,9 @@ h3 :is(a, b) {
 	text-wrap: balance;
 }
 
+/* Inline flex drops the whitespace around each link so the comma sits right after it */
 .meta li {
-	display: inline;
+	display: inline-flex;
 	white-space: nowrap;
 }
 

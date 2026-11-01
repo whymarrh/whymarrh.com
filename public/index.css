@@ -3,9 +3,8 @@
 }
 html {
 	font-size: 16px;
-}
-@media (min-width: 30em) {
-	html {
+
+	@media (min-width: 30em) {
 		font-size: 18px;
 	}
 }
@@ -19,25 +18,26 @@ body {
 		Roboto,
 		Arial,
 		sans-serif;
+
+	@media (min-width: 500px) {
+		padding: 3rem;
+	}
 }
 
-@media (min-width: 500px) {
-	header {
+header {
+	@media (min-width: 500px) {
 		max-width: 450px;
-	}
-	body {
-		padding: 3rem;
 	}
 }
 
 a {
 	text-decoration: none;
 	transition: color 0.2s ease-in-out;
-}
 
-a:hover {
-	text-decoration: underline;
-	text-decoration-skip-ink: auto;
+	&:hover {
+		text-decoration: underline;
+		text-decoration-skip-ink: auto;
+	}
 }
 
 h1,
@@ -83,21 +83,21 @@ hr {
 	padding: 0;
 	margin: 0;
 	display: flex;
-}
 
-.links a {
-	margin-right: 0.5rem;
-	font-size: 1.5rem;
-}
+	& a {
+		margin-right: 0.5rem;
+		font-size: 1.5rem;
 
-.links a svg {
-	width: 1em;
-	height: 1em;
-	vertical-align: -0.125em;
-}
+		& svg {
+			width: 1em;
+			height: 1em;
+			vertical-align: -0.125em;
+		}
 
-.links a:hover {
-	text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 /* Hidden visually, but still read by screen readers */

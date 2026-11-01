@@ -1,5 +1,7 @@
 /* Sizes are in rem: 16px on screen, 10pt in print. */
 
+/* Each rule nests its own small screen styles (one column) and print styles */
+
 :root {
 	--sans: "Source Sans 3", "Segoe UI", "Myriad Pro", system-ui, sans-serif;
 	--serif: "Source Serif 4", Charter, "Sitka Text", Cambria, Georgia, serif;
@@ -8,12 +10,21 @@
 
 	color: #333;
 	font: 1rem / 1.3 var(--serif);
+
+	@media print {
+		font-size: 10pt;
+	}
 }
 
 body {
 	max-width: 50rem;
 	margin: 0 auto;
 	padding: 3rem 1.5rem;
+
+	@media print {
+		max-width: none;
+		padding: 0;
+	}
 }
 
 h1,
@@ -34,12 +45,16 @@ a {
 	color: inherit;
 	text-decoration-color: var(--accent);
 	text-underline-offset: 0.2em;
-}
 
-h3 a,
-address a,
-.meta a {
-	text-decoration: none;
+	h3 &,
+	address &,
+	.meta & {
+		text-decoration: none;
+	}
+
+	@media print {
+		text-decoration: none;
+	}
 }
 
 ul {
@@ -67,34 +82,45 @@ header {
 	justify-content: space-between;
 	align-items: last baseline;
 	gap: 0.5rem 2rem;
+
+	@media (width < 40rem) {
+		display: block;
+	}
 }
 
 h1 {
 	font-size: 2rem;
 }
 
-hgroup p {
-	font-family: var(--sans);
-	font-size: 1.6rem;
+hgroup {
+	& p {
+		font-family: var(--sans);
+		font-size: 1.6rem;
+	}
 }
 
 address {
 	font-style: italic;
 	line-height: 1.5;
 	text-align: right;
-}
 
-address ul {
-	padding: 0;
-	list-style: none;
-}
+	& ul {
+		padding: 0;
+		list-style: none;
+	}
 
-address li {
-	display: inline;
-}
+	& li {
+		display: inline;
+	}
 
-address li + li::before {
-	content: " | ";
+	& li + li::before {
+		content: " | ";
+	}
+
+	@media (width < 40rem) {
+		margin-top: 0.5rem;
+		text-align: left;
+	}
 }
 
 /* Introduction: a short note beside a summary */
@@ -103,17 +129,25 @@ address li + li::before {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	margin-top: 2rem;
-}
 
-/* Both columns stretch to the taller one, with their text centred vertically */
-.intro p {
-	align-content: center;
+	/* Both columns stretch to the taller one, with their text centred vertically */
+	& p {
+		align-content: center;
+	}
+
+	@media (width < 40rem) {
+		display: block;
+	}
 }
 
 .note {
 	padding: 0 2rem 0 1rem;
 	border-left: 3px solid var(--accent);
 	font-style: italic;
+
+	@media (width < 40rem) {
+		margin: 1.5rem 0 1rem;
+	}
 }
 
 /*
@@ -132,26 +166,34 @@ article {
 	position: relative;
 	padding-right: 16.5rem;
 	break-inside: avoid;
-}
 
-/* "~" rather than "+", so the gap holds even with the toggle between entries */
-article ~ article {
-	margin-top: 1.25rem;
+	/* "~" rather than "+", so the gap holds even with the toggle between entries */
+	& ~ & {
+		margin-top: 1.25rem;
+	}
+
+	@media (width < 40rem) {
+		padding-right: 0;
+	}
 }
 
 /* "Show older work experience": unchecking it hides every entry after it, on screen and in print */
 .toggle {
 	margin: 1.25rem 0;
 	font-family: var(--sans);
-}
 
-.toggle input {
-	margin: 0 0.4rem 0 0;
-	accent-color: var(--accent);
-}
+	& input {
+		margin: 0 0.4rem 0 0;
+		accent-color: var(--accent);
+	}
 
-.toggle:has(input:not(:checked)) ~ article {
-	display: none;
+	&:has(input:not(:checked)) ~ article {
+		display: none;
+	}
+
+	@media print {
+		display: none;
+	}
 }
 
 h3,
@@ -164,10 +206,10 @@ h3,
 h3 {
 	font-weight: normal;
 	break-after: avoid;
-}
 
-h3 :is(a, b) {
-	font-weight: 600;
+	& :is(a, b) {
+		font-weight: 600;
+	}
 }
 
 .meta {
@@ -176,71 +218,51 @@ h3 :is(a, b) {
 	right: 0;
 	width: 15rem;
 	text-align: right;
-}
 
-.meta p {
-	font-family: var(--sans);
-	font-weight: bold;
-}
+	& p {
+		font-family: var(--sans);
+		font-weight: bold;
 
-.meta ul {
-	padding: 0;
-	list-style: none;
-	color: var(--accent);
-	font: 0.8rem / 1.5 var(--mono);
-	text-wrap: balance;
-}
-
-/* Inline flex drops the whitespace around each link so the comma sits right after it */
-.meta li {
-	display: inline-flex;
-	white-space: nowrap;
-}
-
-.meta li:not(:last-child)::after {
-	content: ",";
-}
-
-.details > * + * {
-	margin-top: 0.5rem;
-}
-
-/* Keep an entry's opening paragraph on the same page as its first bullet */
-.details > ul {
-	break-before: avoid;
-}
-
-/* Small screens: one column */
-
-@media (width < 40rem) {
-	header,
-	.intro {
-		display: block;
+		@media (width < 40rem) {
+			margin: 0;
+			font-size: 1rem;
+		}
 	}
 
-	address {
-		margin-top: 0.5rem;
-		text-align: left;
+	& ul {
+		padding: 0;
+		list-style: none;
+		color: var(--accent);
+		font: 0.8rem / 1.5 var(--mono);
+		text-wrap: balance;
 	}
 
-	.note {
-		margin: 1.5rem 0 1rem;
+	/* Inline flex drops the whitespace around each link so the comma sits right after it */
+	& li {
+		display: inline-flex;
+		white-space: nowrap;
+
+		&:not(:last-child)::after {
+			content: ",";
+		}
 	}
 
-	article {
-		padding-right: 0;
-	}
-
-	.meta {
+	@media (width < 40rem) {
 		position: static;
 		width: auto;
 		margin-bottom: 0.75rem;
 		text-align: left;
 	}
+}
 
-	.meta p {
-		margin: 0;
-		font-size: 1rem;
+.details {
+	& > * + * {
+		margin-top: 0.5rem;
+	}
+
+	/* Keep an entry's opening paragraph on the same page as its first bullet */
+	& > ul {
+		break-before: avoid;
 	}
 }
 
@@ -254,24 +276,5 @@ h3 :is(a, b) {
 		content: "p. " counter(page) " of " counter(pages);
 		color: #333;
 		font: 0.75rem var(--sans);
-	}
-}
-
-@media print {
-	.toggle {
-		display: none;
-	}
-
-	:root {
-		font-size: 10pt;
-	}
-
-	body {
-		max-width: none;
-		padding: 0;
-	}
-
-	a {
-		text-decoration: none;
 	}
 }

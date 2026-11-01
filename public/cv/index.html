@@ -1,211 +1,556 @@
 <!doctype html>
-<html lang=en-ca>
-<head>
-    <meta charset=utf-8>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; base-uri 'none'; form-action 'none';">
-    <title>Whymarrh Whitby — CV</title>
-    <meta name=viewport content="width=device-width,initial-scale=1">
-    <meta name="author" content="Whymarrh Whitby">
-    <meta name="description" content="CV for Whymarrh Whitby, who leads the Application Security team at 1Password.">
-    <link rel="canonical" href="https://whymarrh.com/cv/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400;1,8..60,700&amp;family=Space+Mono&amp;display=swap">
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <header>
-        <hgroup>
-            <h1>Whymarrh Whitby</h1>
-            <p>Staff Developer, Application Security</p>
-        </hgroup>
-        <address>
-            <ul>
-                <li><a href="https://whymarrh.com">whymarrh.com</a></li>
-                <li><a href="https://github.com/whymarrh">github.com/<b>whymarrh</b></a></li>
-            </ul>
-            <ul>
-                <li>Dual Canadian/EU citizen</li>
-                <li>St. John’s, NL</li>
-            </ul>
-        </address>
-    </header>
+<html lang="en-CA">
+	<head>
+		<meta charset="utf-8">
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="default-src 'none'; img-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; base-uri 'none'; form-action 'none';"
+		>
+		<title>Whymarrh Whitby — CV</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="author" content="Whymarrh Whitby">
+		<meta
+			name="description"
+			content="CV for Whymarrh Whitby, who leads the Application Security team at 1Password."
+		>
+		<link rel="canonical" href="https://whymarrh.com/cv/">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400;1,8..60,700&amp;family=Space+Mono&amp;display=swap"
+		>
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<header>
+			<hgroup>
+				<h1>Whymarrh Whitby</h1>
+				<p>Staff Developer, Application Security</p>
+			</hgroup>
+			<address>
+				<ul>
+					<li><a href="https://whymarrh.com">whymarrh.com</a></li>
+					<li>
+						<a href="https://github.com/whymarrh">github.com/<b>whymarrh</b></a>
+					</li>
+				</ul>
+				<ul>
+					<li>Dual Canadian/EU citizen</li>
+					<li>St. John’s, NL</li>
+				</ul>
+			</address>
+		</header>
 
-    <main>
-        <div class="intro">
-            <p class="note">I lead 1Password’s Application Security team, focusing on how the company builds and ships secure software.</p>
-            <p>For over 14 years, I’ve been building well-crafted, secure software and <a href="https://stackoverflow.com/users/1267663/whymarrh">helping others solve their problems</a>. On every team, I take the time to understand how things really work, and I help the people around me level up.</p>
-        </div>
+		<main>
+			<div class="intro">
+				<p class="note">
+					I lead 1Password’s Application Security team, focusing on how the
+					company builds and ships secure software.
+				</p>
+				<p>
+					For over 14 years, I’ve been building well-crafted, secure software
+					and
+					<a href="https://stackoverflow.com/users/1267663/whymarrh"
+						>helping others solve their problems</a
+					>. On every team, I take the time to understand how things really
+					work, and I help the people around me level up.
+				</p>
+			</div>
 
-        <section>
-            <h2>Experience</h2>
+			<section>
+				<h2>Experience</h2>
 
-            <article>
-                <h3><a href="https://1password.com">1Password</a> — Staff Developer, Application Security</h3>
-                <div class="meta">
-                    <p>Since 2025</p>
-                    <ul><li>GitHub Actions</li> <li>Terraform</li> <li>Kubernetes</li> <li>Opengrep</li> <li>pnpm</li> <li>SBOMs</li></ul>
-                </div>
-                <div class="details">
-                    <p>I lead the Application Security team within Product Security. I’m responsible for 1Password’s secure development lifecycle. That covers how code is reviewed and scanned, what it depends on, and how it’s built and released. I also review designs for product teams, most recently for <a href="https://support.1password.com/1password-for-agents-security/">1Password for Agents</a>, which lets AI agents sign in with items people approve.</p>
-                    <ul>
-                        <li>Started and lead 1Password’s company-wide software supply chain security initiative. Its workstreams run across teams, from package registries and software bills of materials (SBOMs) to signed, hardened release pipelines, each with its own owner. I ran the vendor evaluations and made the foundational decisions.</li>
-                        <li>Own the company’s central package registry for 8 ecosystems. It blocks malicious and typosquatted packages, holds back brand-new releases, and lets build pipelines sign in without long-lived tokens. I also moved the company from Yarn Classic to pnpm, which does not run install scripts by default.</li>
-                        <li>Led application security for 1Password’s move from GitLab to GitHub. I wrote the GitHub Actions security policy, now enforced company-wide, which allows only vetted actions pinned to commit hashes. I also turned on secret scanning and push protection, and wrote the decision to isolate code signing from build monitoring.</li>
-                        <li>Rolled out static analysis on the main repositories as a security-minded reviewer rather than a gate. I tuned the rules against real findings, and turned on inline comments and one-click fixes. A year later, I replaced the commercial scanner with open-source Opengrep without losing coverage, and put the budget toward supply chain tooling.</li>
-                        <li>Set up a weekly triage of code, dependency, and cloud vulnerabilities, and partnered with the compliance team on SOC 2 audit evidence. I then handed both to a new Vulnerability Management team I helped hire and onboard.</li>
-                        <li>Mentor developers across teams, sponsor teammates’ promotions, and interview Staff-level candidates.</li>
-                    </ul>
-                </div>
-            </article>
+				<article>
+					<h3>
+						<a href="https://1password.com">1Password</a>
+						— Staff Developer, Application Security
+					</h3>
+					<div class="meta">
+						<p>Since 2025</p>
+						<ul>
+							<li>GitHub Actions</li>
+							<li>Terraform</li>
+							<li>Kubernetes</li>
+							<li>Opengrep</li>
+							<li>pnpm</li>
+							<li>SBOMs</li>
+						</ul>
+					</div>
+					<div class="details">
+						<p>
+							I lead the Application Security team within Product Security. I’m
+							responsible for 1Password’s secure development lifecycle. That
+							covers how code is reviewed and scanned, what it depends on, and
+							how it’s built and released. I also review designs for product
+							teams, most recently for
+							<a
+								href="https://support.1password.com/1password-for-agents-security/"
+								>1Password for Agents</a
+							>, which lets AI agents sign in with items people approve.
+						</p>
+						<ul>
+							<li>
+								Started and lead 1Password’s company-wide software supply chain
+								security initiative. Its workstreams run across teams, from
+								package registries and software bills of materials (SBOMs) to
+								signed, hardened release pipelines, each with its own owner. I
+								ran the vendor evaluations and made the foundational decisions.
+							</li>
+							<li>
+								Own the company’s central package registry for 8 ecosystems. It
+								blocks malicious and typosquatted packages, holds back brand-new
+								releases, and lets build pipelines sign in without long-lived
+								tokens. I also moved the company from Yarn Classic to pnpm,
+								which does not run install scripts by default.
+							</li>
+							<li>
+								Led application security for 1Password’s move from GitLab to
+								GitHub. I wrote the GitHub Actions security policy, now enforced
+								company-wide, which allows only vetted actions pinned to commit
+								hashes. I also turned on secret scanning and push protection,
+								and wrote the decision to isolate code signing from build
+								monitoring.
+							</li>
+							<li>
+								Rolled out static analysis on the main repositories as a
+								security-minded reviewer rather than a gate. I tuned the rules
+								against real findings, and turned on inline comments and
+								one-click fixes. A year later, I replaced the commercial scanner
+								with open-source Opengrep without losing coverage, and put the
+								budget toward supply chain tooling.
+							</li>
+							<li>
+								Set up a weekly triage of code, dependency, and cloud
+								vulnerabilities, and partnered with the compliance team on SOC 2
+								audit evidence. I then handed both to a new Vulnerability
+								Management team I helped hire and onboard.
+							</li>
+							<li>
+								Mentor developers across teams, sponsor teammates’ promotions,
+								and interview Staff-level candidates.
+							</li>
+						</ul>
+					</div>
+				</article>
 
-            <article>
-                <h3><a href="https://1password.com">1Password</a> — Staff Developer, Billing &amp; Payments</h3>
-                <div class="meta">
-                    <p>2022 to 2025</p>
-                    <ul><li>Go</li> <li>TypeScript</li> <li>Stripe</li> <li>Kafka</li> <li>OpenAPI</li> <li>GitLab CI</li></ul>
-                </div>
-                <div class="details">
-                    <p>I was the Staff Developer on the team that runs 1Password’s subscriptions. Over 3 years, I moved 1Password’s billing from serving a single product to a foundation for its multi-product future.</p>
-                    <ul>
-                        <li>Wrote the plan that took the team’s engineering direction from research to roadmap. It covered core principles, monthly updates to leadership, and a future architecture with queued webhooks, idempotent payment calls, consistency checks, and an audit log.</li>
-                        <li>Wrote the technical roadmap that leadership adopted, which focused the team on a new billing platform built for more than one product. I also helped decide how to deploy it.</li>
-                        <li>Led incident response and blameless reviews, and turned the lessons into health checks, dashboards, build pipeline fixes, and a deploy freeze policy. I designed the fix (pessimistic locking) that ended a whole class of payment worker failures, and made rollbacks 2 clicks.</li>
-                        <li>Built a merge check that blocks breaking API changes, after the fourth time one broke the browser extension. It has since been proposed as the model for catching breaking changes across the company.</li>
-                        <li>Moved the billing service’s partner analytics onto Kafka without losing any data, which let the data team retire an old logging stack.</li>
-                        <li>Wrote the team’s code review guide and set up code owners, so every change reaches a reviewer who understands it.</li>
-                    </ul>
-                </div>
-            </article>
+				<article>
+					<h3>
+						<a href="https://1password.com">1Password</a>
+						— Staff Developer, Billing &amp; Payments
+					</h3>
+					<div class="meta">
+						<p>2022 to 2025</p>
+						<ul>
+							<li>Go</li>
+							<li>TypeScript</li>
+							<li>Stripe</li>
+							<li>Kafka</li>
+							<li>OpenAPI</li>
+							<li>GitLab CI</li>
+						</ul>
+					</div>
+					<div class="details">
+						<p>
+							I was the Staff Developer on the team that runs 1Password’s
+							subscriptions. Over 3 years, I moved 1Password’s billing from
+							serving a single product to a foundation for its multi-product
+							future.
+						</p>
+						<ul>
+							<li>
+								Wrote the plan that took the team’s engineering direction from
+								research to roadmap. It covered core principles, monthly updates
+								to leadership, and a future architecture with queued webhooks,
+								idempotent payment calls, consistency checks, and an audit log.
+							</li>
+							<li>
+								Wrote the technical roadmap that leadership adopted, which
+								focused the team on a new billing platform built for more than
+								one product. I also helped decide how to deploy it.
+							</li>
+							<li>
+								Led incident response and blameless reviews, and turned the
+								lessons into health checks, dashboards, build pipeline fixes,
+								and a deploy freeze policy. I designed the fix (pessimistic
+								locking) that ended a whole class of payment worker failures,
+								and made rollbacks 2 clicks.
+							</li>
+							<li>
+								Built a merge check that blocks breaking API changes, after the
+								fourth time one broke the browser extension. It has since been
+								proposed as the model for catching breaking changes across the
+								company.
+							</li>
+							<li>
+								Moved the billing service’s partner analytics onto Kafka without
+								losing any data, which let the data team retire an old logging
+								stack.
+							</li>
+							<li>
+								Wrote the team’s code review guide and set up code owners, so
+								every change reaches a reviewer who understands it.
+							</li>
+						</ul>
+					</div>
+				</article>
 
-            <article>
-                <h3><a href="https://1password.com">1Password</a> — Senior Developer, User Onboarding &amp; Education</h3>
-                <div class="meta">
-                    <p>2020 to 2022</p>
-                    <ul><li>TypeScript</li> <li>React</li> <li>Go</li> <li>MySQL</li></ul>
-                </div>
-                <div class="details">
-                    <p>I joined 1Password in November 2020 on the User Onboarding &amp; Education team. Working with designers, researchers, writers, and other developers, I helped rebuild how people sign up for and set up 1Password. I built full-stack features in TypeScript and Go. In 2022 the team turned to Knox, 1Password’s new design system, and I became its Tech Lead and Architect. I was promoted to Staff Developer that April.</p>
-                    <ul>
-                        <li>Shipped a redesigned signup flow, invites during signup, suggested vaults, and onboarding cards. Over 2021, signup completion went from 59% to 71% and paid conversion from 31% to 40%. Business and team accounts also got through signup about 40% faster.</li>
-                        <li>Designed and built the server side of vault invites, so admins can choose which vaults a new person joins. That covered the schema, state machine, API, and access rules.</li>
-                        <li>Helped level up quality across the web app’s teams. After a bug of mine slipped through, I wrote a blameless postmortem, built permission-aware test foundations, and updated the shared testing guide. I also helped fix the build system every team relied on.</li>
-                        <li>Led Knox to its first design tokens (shared type, spacing, and colour values) and React components, and helped get it to v1. I also planned its part in the admin console’s cross-team navigation redesign.</li>
-                    </ul>
-                </div>
-            </article>
+				<article>
+					<h3>
+						<a href="https://1password.com">1Password</a>
+						— Senior Developer, User Onboarding &amp; Education
+					</h3>
+					<div class="meta">
+						<p>2020 to 2022</p>
+						<ul>
+							<li>TypeScript</li>
+							<li>React</li>
+							<li>Go</li>
+							<li>MySQL</li>
+						</ul>
+					</div>
+					<div class="details">
+						<p>
+							I joined 1Password in November 2020 on the User Onboarding &amp;
+							Education team. Working with designers, researchers, writers, and
+							other developers, I helped rebuild how people sign up for and set
+							up 1Password. I built full-stack features in TypeScript and Go. In
+							2022 the team turned to Knox, 1Password’s new design system, and I
+							became its Tech Lead and Architect. I was promoted to Staff
+							Developer that April.
+						</p>
+						<ul>
+							<li>
+								Shipped a redesigned signup flow, invites during signup,
+								suggested vaults, and onboarding cards. Over 2021, signup
+								completion went from 59% to 71% and paid conversion from 31% to
+								40%. Business and team accounts also got through signup about
+								40% faster.
+							</li>
+							<li>
+								Designed and built the server side of vault invites, so admins
+								can choose which vaults a new person joins. That covered the
+								schema, state machine, API, and access rules.
+							</li>
+							<li>
+								Helped level up quality across the web app’s teams. After a bug
+								of mine slipped through, I wrote a blameless postmortem, built
+								permission-aware test foundations, and updated the shared
+								testing guide. I also helped fix the build system every team
+								relied on.
+							</li>
+							<li>
+								Led Knox to its first design tokens (shared type, spacing, and
+								colour values) and React components, and helped get it to v1. I
+								also planned its part in the admin console’s cross-team
+								navigation redesign.
+							</li>
+						</ul>
+					</div>
+				</article>
 
-            <article>
-                <h3><a href="https://metamask.io">MetaMask</a> — Senior Software Developer</h3>
-                <div class="meta">
-                    <p>2018 to 2020</p>
-                    <ul><li>JavaScript</li> <li>React</li> <li>Redux</li> <li>Ethereum</li> <li>CircleCI</li></ul>
-                </div>
-                <div class="details">
-                    <p>I was one of the <a href="https://github.com/MetaMask/metamask-extension/pulls?q=author%3Awhymarrh+is%3Amerged">core contributors</a> to MetaMask’s browser extension, the crypto wallet that connects people to Ethereum apps. I was also among its most active reviewers, and helped dozens of outside contributors get their changes merged. By the time I left, MetaMask had passed 1 million monthly users.</p>
-                    <ul>
-                        <li>Moved every user from the old interface to a new React UI, in stages. I first added end-to-end tests and missing features like contract deployment, then made it the default for new installs and migrated everyone else in v6.0. Deleting the old UI removed about 20,000 lines of code, leaving one interface to maintain instead of two.</li>
-                        <li>Built the screens people use to decide which sites can see their accounts. That included the connect screen for EIP-1102 (the standard for sites asking first), privacy mode on by default, and v8.0’s connected sites and accounts views.</li>
-                        <li>Tracked down why stuck transactions slowed the wallet, and shipped fixes in a hotfix. I then cut UI updates for a 3,000-transaction wallet from about 4.5 seconds to 90 milliseconds.</li>
-                        <li>Reworked phishing protection so people can get past a false positive. I also moved blocklist updates to a content delivery network, polled hourly instead of every 3 minutes.</li>
-                        <li>Showed Ethereum Name Service names for addresses, and built the Sai-to-Dai migration notice that shipped the day multi-collateral Dai launched.</li>
-                        <li>Automated releases, moved the codebase to ES modules and JSX, and created the shared ESLint config adopted across 17 MetaMask repos.</li>
-                        <li>Published 44 releases of 15 MetaMask npm packages, including the first releases of <code>@metamask/controllers</code> and <code>@metamask/onboarding</code>. By late 2020, the packages I released were downloaded about 424,000 times a month.</li>
-                    </ul>
-                </div>
-            </article>
+				<article>
+					<h3>
+						<a href="https://metamask.io">MetaMask</a>
+						— Senior Software Developer
+					</h3>
+					<div class="meta">
+						<p>2018 to 2020</p>
+						<ul>
+							<li>JavaScript</li>
+							<li>React</li>
+							<li>Redux</li>
+							<li>Ethereum</li>
+							<li>CircleCI</li>
+						</ul>
+					</div>
+					<div class="details">
+						<p>
+							I was one of the
+							<a
+								href="https://github.com/MetaMask/metamask-extension/pulls?q=author%3Awhymarrh+is%3Amerged"
+								>core contributors</a
+							>
+							to MetaMask’s browser extension, the crypto wallet that connects
+							people to Ethereum apps. I was also among its most active
+							reviewers, and helped dozens of outside contributors get their
+							changes merged. By the time I left, MetaMask had passed 1 million
+							monthly users.
+						</p>
+						<ul>
+							<li>
+								Moved every user from the old interface to a new React UI, in
+								stages. I first added end-to-end tests and missing features like
+								contract deployment, then made it the default for new installs
+								and migrated everyone else in v6.0. Deleting the old UI removed
+								about 20,000 lines of code, leaving one interface to maintain
+								instead of two.
+							</li>
+							<li>
+								Built the screens people use to decide which sites can see their
+								accounts. That included the connect screen for EIP-1102 (the
+								standard for sites asking first), privacy mode on by default,
+								and v8.0’s connected sites and accounts views.
+							</li>
+							<li>
+								Tracked down why stuck transactions slowed the wallet, and
+								shipped fixes in a hotfix. I then cut UI updates for a
+								3,000-transaction wallet from about 4.5 seconds to 90
+								milliseconds.
+							</li>
+							<li>
+								Reworked phishing protection so people can get past a false
+								positive. I also moved blocklist updates to a content delivery
+								network, polled hourly instead of every 3 minutes.
+							</li>
+							<li>
+								Showed Ethereum Name Service names for addresses, and built the
+								Sai-to-Dai migration notice that shipped the day
+								multi-collateral Dai launched.
+							</li>
+							<li>
+								Automated releases, moved the codebase to ES modules and JSX,
+								and created the shared ESLint config adopted across 17 MetaMask
+								repos.
+							</li>
+							<li>
+								Published 44 releases of 15 MetaMask npm packages, including the
+								first releases of <code>@metamask/controllers</code> and
+								<code>@metamask/onboarding</code>. By late 2020, the packages I
+								released were downloaded about 424,000 times a month.
+							</li>
+						</ul>
+					</div>
+				</article>
 
-            <article>
-                <h3><a href="https://icebergfinder.com">Iceberg Finder</a> — Senior Software Developer</h3>
-                <div class="meta">
-                    <p>2017 to 2020</p>
-                    <ul><li>React</li> <li>Redux</li> <li>RxJS</li> <li>Node.js</li> <li>Terraform</li></ul>
-                </div>
-                <div class="details">
-                    <p>I built <a href="https://www.gov.nl.ca/releases/2018/tcii/0606n07/">Newfoundland and Labrador’s Iceberg Finder</a>, a live map of the icebergs off the coast. People share photos, and the province’s visitor centres moderate them. That meant the map, the photo integrations, the Node.js APIs behind them, and the DigitalOcean servers it all ran on. The site and its campaign won 5 awards, including <a href="https://issuu.com/targetnl/docs/2019_ice_awards_book_final/80">gold for Website at the 2019 ICE Awards</a> and <a href="https://enter.omnisam.com/gallery-detail.aspx?gallery_id=2C01AF66-8224-4EA0-8205-47902C7261F4&amp;s=g&amp;comp_id=60B802B2-E08C-4F8E-9459-1BC45A26B92B&amp;entry_id=796481&amp;file_upload_id=1215417&amp;award_id=8712~8715&amp;pn=1">platinum at the 2018 HSMAI Adrian Awards</a>.</p>
-                </div>
-            </article>
+				<article>
+					<h3>
+						<a href="https://icebergfinder.com">Iceberg Finder</a>
+						— Senior Software Developer
+					</h3>
+					<div class="meta">
+						<p>2017 to 2020</p>
+						<ul>
+							<li>React</li>
+							<li>Redux</li>
+							<li>RxJS</li>
+							<li>Node.js</li>
+							<li>Terraform</li>
+						</ul>
+					</div>
+					<div class="details">
+						<p>
+							I built
+							<a href="https://www.gov.nl.ca/releases/2018/tcii/0606n07/"
+								>Newfoundland and Labrador’s Iceberg Finder</a
+							>, a live map of the icebergs off the coast. People share photos,
+							and the province’s visitor centres moderate them. That meant the
+							map, the photo integrations, the Node.js APIs behind them, and the
+							DigitalOcean servers it all ran on. The site and its campaign won
+							5 awards, including
+							<a
+								href="https://issuu.com/targetnl/docs/2019_ice_awards_book_final/80"
+								>gold for Website at the 2019 ICE Awards</a
+							>
+							and
+							<a
+								href="https://enter.omnisam.com/gallery-detail.aspx?gallery_id=2C01AF66-8224-4EA0-8205-47902C7261F4&amp;s=g&amp;comp_id=60B802B2-E08C-4F8E-9459-1BC45A26B92B&amp;entry_id=796481&amp;file_upload_id=1215417&amp;award_id=8712~8715&amp;pn=1"
+								>platinum at the 2018 HSMAI Adrian Awards</a
+							>.
+						</p>
+					</div>
+				</article>
 
-            <article>
-                <h3><a href="https://bluedropism.com">Bluedrop Learning Networks</a> — Software Developer</h3>
-                <div class="meta">
-                    <p>2016 to 2018</p>
-                    <ul><li>Angular</li> <li>React</li> <li>Node.js</li> <li>FeathersJS</li></ul>
-                </div>
-                <div class="details">
-                    <p>I worked on the <a href="https://www.skillspass.com">SkillsPass website</a>, which companies used to track their workers’ training and certifications. I built the first version of Bluedrop Q, a form editor for onboarding employees and customers. I also mentored developers on unit testing and Git.</p>
-                </div>
-            </article>
+				<article>
+					<h3>
+						<a href="https://bluedropism.com">Bluedrop Learning Networks</a>
+						— Software Developer
+					</h3>
+					<div class="meta">
+						<p>2016 to 2018</p>
+						<ul>
+							<li>Angular</li>
+							<li>React</li>
+							<li>Node.js</li>
+							<li>FeathersJS</li>
+						</ul>
+					</div>
+					<div class="details">
+						<p>
+							I worked on the
+							<a href="https://www.skillspass.com">SkillsPass website</a>, which
+							companies used to track their workers’ training and
+							certifications. I built the first version of Bluedrop Q, a form
+							editor for onboarding employees and customers. I also mentored
+							developers on unit testing and Git.
+						</p>
+					</div>
+				</article>
 
-            <article>
-                <h3><a href="https://www.easternedgerobotics.com">Eastern Edge Robotics</a> — Lead Software Developer</h3>
-                <div class="meta">
-                    <p>2015 to 2016</p>
-                    <ul><li>Java</li> <li>Kotlin</li> <li>RxJava</li></ul>
-                </div>
-                <div class="details">
-                    <p>I led the software team for an underwater robot. I planned the work, built the control software, and co-wrote the technical documentation. My team <a href="https://gazette.mun.ca/student-life/international-champions/">placed first overall at the university level</a> of the 2016 MATE International ROV Competition, against 30 teams.</p>
-                </div>
-            </article>
+				<article>
+					<h3>
+						<a href="https://www.easternedgerobotics.com"
+							>Eastern Edge Robotics</a
+						>
+						— Lead Software Developer
+					</h3>
+					<div class="meta">
+						<p>2015 to 2016</p>
+						<ul>
+							<li>Java</li>
+							<li>Kotlin</li>
+							<li>RxJava</li>
+						</ul>
+					</div>
+					<div class="details">
+						<p>
+							I led the software team for an underwater robot. I planned the
+							work, built the control software, and co-wrote the technical
+							documentation. My team
+							<a
+								href="https://gazette.mun.ca/student-life/international-champions/"
+								>placed first overall at the university level</a
+							>
+							of the 2016 MATE International ROV Competition, against 30 teams.
+						</p>
+					</div>
+				</article>
 
-            <article>
-                <h3><a href="https://en.wikipedia.org/wiki/Amec_Foster_Wheeler">Amec Foster Wheeler</a> — Software Developer</h3>
-                <div class="meta">
-                    <p>2014 to 2015<br>2016</p>
-                    <ul><li>C#</li> <li>Rx.NET</li> <li>ArcGIS</li> <li>Python</li> <li>Ansible</li></ul>
-                </div>
-                <div class="details">
-                    <p>I built <a href="https://www.releases.gov.nl.ca/releases/2014/ibrd/0610n05.aspx">an ice surveillance system</a> that tracked icebergs in the Atlantic and forecast their drift for offshore ships. That meant the C# data pipeline and the ArcGIS map. I also maintained weather forecasting tools and Linux servers, on-premise and in AWS.</p>
-                </div>
-            </article>
-        </section>
+				<article>
+					<h3>
+						<a href="https://en.wikipedia.org/wiki/Amec_Foster_Wheeler"
+							>Amec Foster Wheeler</a
+						>
+						— Software Developer
+					</h3>
+					<div class="meta">
+						<p>2014 to 2015<br>2016</p>
+						<ul>
+							<li>C#</li>
+							<li>Rx.NET</li>
+							<li>ArcGIS</li>
+							<li>Python</li>
+							<li>Ansible</li>
+						</ul>
+					</div>
+					<div class="details">
+						<p>
+							I built
+							<a
+								href="https://www.releases.gov.nl.ca/releases/2014/ibrd/0610n05.aspx"
+								>an ice surveillance system</a
+							>
+							that tracked icebergs in the Atlantic and forecast their drift for
+							offshore ships. That meant the C# data pipeline and the ArcGIS
+							map. I also maintained weather forecasting tools and Linux
+							servers, on-premise and in AWS.
+						</p>
+					</div>
+				</article>
+			</section>
 
-        <section>
-            <h2>Open Source and Writing</h2>
+			<section>
+				<h2>Open Source and Writing</h2>
 
-            <article>
-                <h3><a href="https://github.com/whymarrh/private-relay">Private Relay</a> and <a href="https://github.com/whymarrh/private-request">Private Request</a></h3>
-                <div class="meta">
-                    <p>Since 2020</p>
-                    <ul><li>HAProxy</li> <li>Terraform</li> <li>TypeScript</li></ul>
-                </div>
-                <div class="details">
-                    <p>I built 2 small privacy tools based on how <a href="https://signal.org/blog/signal-and-giphy-update/">Signal keeps GIF search private</a>. Private Relay is a TCP proxy that hides your IP address without being able to read your traffic. Private Request splits each download into padded range requests, so its size does not give away what you fetched.</p>
-                </div>
-            </article>
+				<article>
+					<h3>
+						<a href="https://github.com/whymarrh/private-relay"
+							>Private Relay</a
+						>
+						and
+						<a href="https://github.com/whymarrh/private-request"
+							>Private Request</a
+						>
+					</h3>
+					<div class="meta">
+						<p>Since 2020</p>
+						<ul>
+							<li>HAProxy</li>
+							<li>Terraform</li>
+							<li>TypeScript</li>
+						</ul>
+					</div>
+					<div class="details">
+						<p>
+							I built 2 small privacy tools based on how
+							<a href="https://signal.org/blog/signal-and-giphy-update/"
+								>Signal keeps GIF search private</a
+							>. Private Relay is a TCP proxy that hides your IP address without
+							being able to read your traffic. Private Request splits each
+							download into padded range requests, so its size does not give
+							away what you fetched.
+						</p>
+					</div>
+				</article>
 
-            <article>
-                <h3><a href="https://www.thejot.net/article-preview/?show_article_preview=910">Sunken History of Grand Lake</a></h3>
-                <div class="meta">
-                    <p>2017</p>
-                </div>
-                <div class="details">
-                    <p>Lake Maps NL set out to map Grand Lake’s shoreline from before a 1920s dam raised the water 11 metres. The sonar picked up what looked like the sunken railway bridge, but with too many piers. Archive photos revealed a forgotten temporary dam just upstream, and side-scan sonar later captured both, including all 21 of the dam’s piers. I co-wrote this paper about the find with 4 other members, published in <cite>The Journal of Ocean Technology</cite> (volume 12, number 4).</p>
-                </div>
-            </article>
+				<article>
+					<h3>
+						<a
+							href="https://www.thejot.net/article-preview/?show_article_preview=910"
+							>Sunken History of Grand Lake</a
+						>
+					</h3>
+					<div class="meta">
+						<p>2017</p>
+					</div>
+					<div class="details">
+						<p>
+							Lake Maps NL set out to map Grand Lake’s shoreline from before a
+							1920s dam raised the water 11 metres. The sonar picked up what
+							looked like the sunken railway bridge, but with too many piers.
+							Archive photos revealed a forgotten temporary dam just upstream,
+							and side-scan sonar later captured both, including all 21 of the
+							dam’s piers. I co-wrote this paper about the find with 4 other
+							members, published in
+							<cite>The Journal of Ocean Technology</cite>
+							(volume 12, number 4).
+						</p>
+					</div>
+				</article>
 
-            <article>
-                <h3><a href="https://github.com/RxBroadcast/RxBroadcast">RxBroadcast</a></h3>
-                <div class="meta">
-                    <p>2016 to 2020</p>
-                    <ul><li>Java</li> <li>RxJava</li></ul>
-                </div>
-                <div class="details">
-                    <p>I pulled this small Java event library out of the robot’s control software. It broadcasts events over UDP with ordering guarantees, and has 99% mutation test coverage.</p>
-                </div>
-            </article>
-        </section>
+				<article>
+					<h3>
+						<a href="https://github.com/RxBroadcast/RxBroadcast">RxBroadcast</a>
+					</h3>
+					<div class="meta">
+						<p>2016 to 2020</p>
+						<ul>
+							<li>Java</li>
+							<li>RxJava</li>
+						</ul>
+					</div>
+					<div class="details">
+						<p>
+							I pulled this small Java event library out of the robot’s control
+							software. It broadcasts events over UDP with ordering guarantees,
+							and has 99% mutation test coverage.
+						</p>
+					</div>
+				</article>
+			</section>
 
-        <section>
-            <h2>Volunteering</h2>
+			<section>
+				<h2>Volunteering</h2>
 
-            <article>
-                <h3><a href="https://www.cbc.ca/news/canada/newfoundland-labrador/schools-need-better-computer-science-education-group-says-1.3135626">Code NL</a> and <a href="https://www.canadalearningcode.ca">Canada Learning Code</a></h3>
-                <div class="details">
-                    <p>I taught kids in Newfoundland and Labrador how to program using <a href="https://scratch.mit.edu">MIT’s Scratch</a>. I also advocated for more computer science in schools, where it’s still not widely offered, and for better digital literacy.</p>
-                </div>
-            </article>
-        </section>
-    </main>
-</body>
+				<article>
+					<h3>
+						<a
+							href="https://www.cbc.ca/news/canada/newfoundland-labrador/schools-need-better-computer-science-education-group-says-1.3135626"
+							>Code NL</a
+						>
+						and
+						<a href="https://www.canadalearningcode.ca">Canada Learning Code</a>
+					</h3>
+					<div class="details">
+						<p>
+							I taught kids in Newfoundland and Labrador how to program using
+							<a href="https://scratch.mit.edu">MIT’s Scratch</a>. I also
+							advocated for more computer science in schools, where it’s still
+							not widely offered, and for better digital literacy.
+						</p>
+					</div>
+				</article>
+			</section>
+		</main>
+	</body>
 </html>

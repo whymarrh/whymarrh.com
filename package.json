@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "homepage": "https://github.com/whymarrh/whymarrh.com",
+  "bugs": {
+    "url": "https://github.com/whymarrh/whymarrh.com/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whymarrh/whymarrh.com.git"
+  },
+  "scripts": {
+    "format": "biome format",
+    "lint": "biome lint"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.4"
+  }
+}

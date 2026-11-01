@@ -1,6 +1,9 @@
 services:
   dev:
-    image: node:lts-alpine
+    build:
+      dockerfile_inline: |
+        FROM node:lts-alpine
+        RUN apk add --no-cache shellcheck
     init: true
     tty: true
     stdin_open: true
@@ -22,7 +25,6 @@ services:
     volumes:
       - ./public:/srv:ro
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy-data:/data # Store self-signed CA and certificate between restarts
       - caddy-config:/config
     ports:
       - "8000:8000"
@@ -36,5 +38,4 @@ services:
 
 volumes:
   npm-cache:
-  caddy-data:
   caddy-config:

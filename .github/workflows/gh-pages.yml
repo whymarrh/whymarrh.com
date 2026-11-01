@@ -30,6 +30,10 @@ jobs:
           persist-credentials: false
       - name: Setup Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - name: Serve the site
+        run: python3 -m http.server 8000 --bind 127.0.0.1 --directory public >/dev/null 2>&1 &
+      - name: Print the CV to PDF
+        run: scripts/generate-pdf
       - name: Upload artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:

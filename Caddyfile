@@ -1,11 +1,4 @@
-{
-	auto_https disable_redirects
-	# Assume SNI for IP URLs to serve certificates
-	default_sni 127.0.0.1
-}
-
-localhost:8000, 127.0.0.1:8000 {
-	tls internal
+http://localhost:8000, http://127.0.0.1:8000 {
 	root * /srv
 	header Cache-Control "no-store"
 	file_server {

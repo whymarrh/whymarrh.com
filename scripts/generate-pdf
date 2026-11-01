@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+set -e                   # Exit immediately if any command exits non-zero
+set -u                   # Treat references to unset variables as an error
+set -o pipefail          # A pipeline exit status is the rightmost non-zero
+shopt -s inherit_errexit # Propagate errexit into $(...) so a failing command substitution exits
+umask 077                # Restrict mode on files we create so only the owner can read or write them
+
+readonly URL="http://127.0.0.1:8000/cv/" # Served by Caddy in Docker Compose and by Python in CI
+readonly OUTPUT="public/cv/cv.pdf"
+
+os="$(uname -s)"
+readonly os
+
+# Find Chrome in the Applications folder on macOS and on the PATH in CI
+if [[ "${os}" == "Darwin" ]]; then
+    readonly CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+else
+    readonly CHROME="google-chrome"
+fi
+
+cd "$(dirname "$0")/.."
+
+tempdir="$(mktemp -d)"
+readonly tempdir
+trap 'rm -rf "${tempdir}"' EXIT
+
+readonly curl_opts=(
+    --fail              # Exit non-zero on HTTP 4xx/5xx
+    --silent            # Stay quiet while waiting for the server
+    --retry 10          # Retry in case the server is still starting
+    --retry-connrefused # Treat a refused connection as retryable
+    --retry-delay 1     # Wait one second between attempts
+    --output /dev/null  # Discard the response
+)
+
+# Wait for the HTTP server. The page's Content Security Policy needs one to load its stylesheets.
+if ! curl "${curl_opts[@]}" "${URL}"; then
+    echo "error: nothing is serving ${URL}. Start the site first with docker compose up -d web" >&2
+    exit 1
+fi
+
+readonly chrome_opts=(
+    --headless                          # Run without a window
+    --disable-gpu                       # Render in software
+    --no-first-run                      # Skip first-run setup
+    --log-level=3                       # Keep the log to fatal errors
+    --user-data-dir="${tempdir}/chrome" # Use a throwaway profile
+    --no-pdf-header-footer              # Leave out the date, title, and URL on each page
+    --virtual-time-budget=15000         # Give Google Fonts up to 15 seconds of page time to load
+    --print-to-pdf="${tempdir}/cv.pdf"  # Headless Chrome prints on US Letter by default
+)
+
+"${CHROME}" "${chrome_opts[@]}" "${URL}"
+
+# Check the PDF before publishing it for the correct paper size and fonts
+grep --text --quiet --fixed-strings "MediaBox [0 0 612 792]" "${tempdir}/cv.pdf" # US Letter is 8.5 by 11 inches
+grep --text --quiet --fixed-strings "SourceSerif4" "${tempdir}/cv.pdf"
+grep --text --quiet --fixed-strings "SourceSans3" "${tempdir}/cv.pdf"
+
+# Make it readable by everyone so GitHub Pages can serve it
+install -m 644 "${tempdir}/cv.pdf" "${OUTPUT}"

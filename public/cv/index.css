@@ -4,7 +4,7 @@
 	--sans: "Source Sans 3", "Segoe UI", "Myriad Pro", system-ui, sans-serif;
 	--serif: "Source Serif 4", Charter, "Sitka Text", Cambria, Georgia, serif;
 	--mono: "Space Mono", ui-monospace, Menlo, Consolas, monospace;
-	--accent: #50a2ea;
+	--accent: #11599a; /* Blue at 7.2:1 on white to meet WCAG AAA for text */
 
 	color: #333;
 	font: 1rem / 1.3 var(--serif);

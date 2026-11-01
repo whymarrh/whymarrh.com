@@ -1,0 +1,40 @@
+services:
+  dev:
+    image: node:lts-alpine
+    init: true
+    tty: true
+    stdin_open: true
+    stop_signal: SIGHUP # An interactive shell ignores SIGTERM
+    working_dir: /site
+    volumes:
+      - .:/site
+      - npm-cache:/root/.npm
+    environment:
+      NPM_CONFIG_UPDATE_NOTIFIER: "false"
+      NPM_CONFIG_FUND: "false"
+    command: sh
+    depends_on:
+      - web
+      - validator
+
+  web:
+    image: caddy:2-alpine
+    volumes:
+      - ./public:/srv:ro
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data # Store self-signed CA and certificate between restarts
+      - caddy-config:/config
+    ports:
+      - "8000:8000"
+
+  validator:
+    image: ghcr.io/validator/validator:latest
+    volumes:
+      - ./public:/site:ro
+    ports:
+      - "8888:8888"
+
+volumes:
+  npm-cache:
+  caddy-data:
+  caddy-config:

@@ -155,21 +155,23 @@
 							</li>
 							<li>
 								Launched the company’s central package registry to block
-								compromised packages and enforce policy decisions. I also moved
-								the company from Yarn Classic to pnpm, which does not run
-								install scripts by default.
+								compromised packages and enforce supply chain policy decisions.
+								I also ran the company’s move from Yarn Classic to pnpm, which
+								does not run install scripts by default. I wrote tooling that
+								automated the change across more than 1,000 repositories.
 							</li>
 							<li>
 								Led application security for 1Password’s move from GitLab to
 								GitHub. I wrote the GitHub Actions security policy, now enforced
-								company-wide, which requires vetted actions. I also turned on
-								secret scanning and push protection, and wrote the decision to
-								isolate code signing from build monitoring.
+								company-wide, which requires vetted actions. I also resolved
+								existing findings to turn on secret scanning and push
+								protection. I wrote the policy that isolates code signing from
+								build monitoring in our self-hosted runner cluster.
 							</li>
 							<li>
-								Rolled out centralized static analysis across repositories using
-								Opengrep. It scans each code change for insecure patterns and
-								helps educate developers with suggested fixes.
+								Built a centralized static analysis toolchain on top of
+								Opengrep. It scans repositories company-wide for insecure
+								patterns and helps educate developers with suggested fixes.
 							</li>
 							<li>
 								Set up a weekly triage of code, dependency, and cloud
